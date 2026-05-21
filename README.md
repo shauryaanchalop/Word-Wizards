@@ -43,4 +43,4 @@ To run this project locally, no build tools or package managers are required.
 ### Installation
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/shauryaanchalop/Word-Wizards.git](https://github.com/shauryaanchalop/Word-Wizards.git)
+   git clone https://github.com/shauryaanchalop/Word-Wizards.git
