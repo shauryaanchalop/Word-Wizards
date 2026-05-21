@@ -1,9 +1,12 @@
 # 🪄 Word Wizards | Official Society Website
 
+[![Live Demo](https://img.shields.io/badge/Website-Live_Now-e11d48?style=for-the-badge)](https://wordwizardsadgips.in/)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)
+
+**🌐 View the live experience here: [wordwizardsadgips.in](https://wordwizardsadgips.in/)**
 
 The official landing page for **Word Wizards**, the premier First-Year Student Development Society at Dr. Akhilesh Das Gupta Institute of Technology & Management (ADGIPS). 
 
@@ -43,4 +46,4 @@ To run this project locally, no build tools or package managers are required.
 ### Installation
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/shauryaanchalop/Word-Wizards.git
+   git clone [https://github.com/shauryaanchalop/Word-Wizards.git](https://github.com/shauryaanchalop/Word-Wizards.git)
