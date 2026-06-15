@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![Word Wizards](https://i.ibb.co/kgN9XqFB/Word-Wizards-1.png)
+![Word Wizards]
 
 ### The Official First-Year Student Development Society of ADGIPS
 
