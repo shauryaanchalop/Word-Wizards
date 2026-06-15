@@ -2,8 +2,6 @@
 
 <div align="center">
 
-![Word Wizards]
-
 ### The Official First-Year Student Development Society of ADGIPS
 
 **Empower • Create • Lead • Grow**
