@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Word Wizards | ADGIPS</title>
+    
+    <link rel="icon" type="image/png" href="https://i.ibb.co/kgN9XqFB/Word-Wizards-1.png">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Montserrat:wght@700;800;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.39/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="loading">
+
+    <div class="preloader">
+        <div class="preloader-text">Igniting the Potential...</div>
+        <div class="progress-bar"><div class="progress"></div></div>
+    </div>
+
+    <!-- IMAGE LIGHTBOX -->
+    <div id="imageLightbox" class="lightbox-overlay">
+        <div class="lightbox-close-btn premium-hover" id="lightboxClose"></div>
+        <img class="lightbox-img" src="" alt="Magnified View">
+    </div>
+
+    <!-- ELITE SQUIRCLE MODAL (For Council Members) -->
+    <div class="modal-overlay" id="memberModal">
+        <div class="modal-content">
+            <div class="close-modal-btn premium-hover" id="closeModal"></div>
+            <div class="close-tooltip">CLOSE</div>
+            <div class="modal-avatar-container">
+                <div class="modal-avatar" id="modalAvatar"></div>
+            </div>
+            <div class="modal-info">
+                <h2 id="modalName">Name</h2>
+                <h4 id="modalRole">Role</h4>
+            </div>
+            <div class="modal-body" id="modalDesc"></div>
+        </div>
+    </div>
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <nav class="navbar" id="navbar">
+        <div class="logo premium-hover" onclick="switchSection('#home')">
+            <img src="https://i.ibb.co/kgN9XqFB/Word-Wizards-1.png" alt="Logo" onerror="this.style.display='none'">
+            <div class="logo-text">WORD WIZARDS</div>
+        </div>
+        <div class="hamburger">
+            <div class="line1"></div><div class="line2"></div><div class="line3"></div>
+        </div>
+        <ul class="nav-links">
+            <li><a data-target="#home" class="active-link premium-hover">Home</a></li>
+            <li><a data-target="#about" class="premium-hover">About</a></li>
+            <li><a data-target="#departments" class="premium-hover">Departments</a></li>
+            <li><a data-target="#events" class="premium-hover">Events</a></li>
+            <li><a data-target="#council" class="premium-hover">Council</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <header id="home" class="hero page-section active">
+            <video class="hero-video" autoplay loop muted playsinline>
+                <source src="https://res.cloudinary.com/donf76gql/video/upload/v1779097654/my-reel_mr7uwi.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+            <div class="hero-content" id="parallax-text">
+                <div class="hero-title-container">
+                    <h1 class="hero-title">WORD WIZARDS</h1>
+                </div>
+                <div class="hero-title-container">
+                    <p class="hero-subtitle">The Official First-Year Student Development Society of ADGIPS</p>
+                </div>
+                <div class="button-wrapper hero-btn">
+                    <button data-target="#departments" class="cta-button nav-trigger premium-hover">Unleash Your Potential</button>
+                </div>
+            </div>
+            <div class="marquee-wrapper">
+                <div class="marquee-content">
+                    <span>COMMUNICATION</span> <span class="dot">•</span> 
+                    <span>STAGE PRESENCE</span> <span class="dot">•</span> 
+                    <span>LEADERSHIP</span> <span class="dot">•</span> 
+                    <span>CREATIVE MEDIA</span> <span class="dot">•</span> 
+                    <span>ENTERTAINMENT</span> <span class="dot">•</span>
+                    <span>COMMUNICATION</span> <span class="dot">•</span> 
+                    <span>STAGE PRESENCE</span> <span class="dot">•</span> 
+                    <span>LEADERSHIP</span> <span class="dot">•</span> 
+                    <span>CREATIVE MEDIA</span> <span class="dot">•</span> 
+                    <span>ENTERTAINMENT</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- SPLIT ABOUT SECTION WITH INFINITE MARQUEE -->
+        <section id="about" class="section page-section">
+            <div class="section-header reveal">
+                <h2>Our Mission</h2>
+            </div>
+            <div class="about-text-wrap reveal">
+                <p>We are a dynamic first-year student development society dedicated to holistic growth. From conquering stage fear and mastering communication, to exploring video editing, cutting-edge graphics, anchoring, and pure entertainment. We empower freshmen with the <strong>knowledge of everything</strong> to own their college journey from day one. Step into the spotlight and discover your true potential.</p>
+            </div>
+            
+            <div class="gallery-marquee-container reveal">
+                <div class="gallery-track track-1">
+                    <img loading="lazy" src="https://images.unsplash.com/photo-1540317580384-e5d43867caa6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+                    <img loading="lazy" src="https://images.unsplash.com/photo-1475721025505-c315a6ab3600?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+                    <img loading="lazy" src="https://images.unsplash.com/photo-1515162816999-a0c47dc192f7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+                    <img loading="lazy" src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+                    <img loading="lazy" src="https://images.unsplash.com/photo-1511578314322-379afb476865?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+                    <img loading="lazy" src="https://images.unsplash.com/photo-1544531586-fde5298cdd40?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+                    <img loading="lazy" src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+                    <!-- Duplicate for infinite loop -->
+                    <img loading="lazy" src="https://images.unsplash.com/photo-1540317580384-e5d43867caa6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+                    <img loading="lazy" src="https://images.unsplash.com/photo-1475721025505-c315a6ab3600?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+                    <img loading="lazy" src="https://images.unsplash.com/photo-1515162816999-a0c47dc192f7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+                    <img loading="lazy" src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+                </div>
+                <div class="gallery-track track-2">
+                    <img loading="lazy" src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+                    <img loading="lazy" src="https://images.unsplash.com/photo-1505236858219-8359eb29e329?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+                    <img loading="lazy" src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+                    <img loading="lazy" src="https://images.unsplash.com/photo-1605806616949-1e87b487cb2a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+                    <img loading="lazy" src="https://images.unsplash.com/photo-1615592389070-bcc97e0504d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+                    <img loading="lazy" src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+                    <img loading="lazy" src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+                    <!-- Duplicate for infinite loop -->
+                    <img loading="lazy" src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+                    <img loading="lazy" src="https://images.unsplash.com/photo-1505236858219-8359eb29e329?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+                    <img loading="lazy" src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+                    <img loading="lazy" src="https://images.unsplash.com/photo-1605806616949-1e87b487cb2a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+                </div>
+            </div>
+        </section>
+
+        <!-- DEPARTMENTS -->
+        <section id="departments" class="section page-section alt-bg">
+            <div class="section-header reveal">
+                <h2>Our Departments</h2>
+                <p class="section-text">The specialized pillars that build our legacy and train our first-year members to master their craft.</p>
+            </div>
+            
+            <div class="tech-highlight-card reveal premium-hover">
+                <span class="tech-badge">NEWLY OPENED</span>
+                <h3>Technical Department</h3>
+                <p>The digital architects of Word Wizards. We dive into coding, web development, tech solutions, and building the digital future of the society.</p>
+            </div>
+
+            <div class="equal-grid">
+                <div class="equal-card reveal premium-hover">
+                    <div class="card-title-section">
+                        <h3>Anchoring</h3>
+                    </div>
+                    <div class="card-desc-section">
+                        <p>Owning the stage. We train members in the art of crowd control and commanding an audience.</p>
+                    </div>
+                </div>
+
+                <div class="equal-card reveal premium-hover" style="transition-delay: 0.1s;">
+                    <div class="card-title-section">
+                        <h3>Graphics</h3>
+                    </div>
+                    <div class="card-desc-section">
+                        <p>Our design team turns raw ideas into stunning, professional digital aesthetics.</p>
+                    </div>
+                </div>
+
+                <div class="equal-card reveal premium-hover" style="transition-delay: 0.2s;">
+                    <div class="card-title-section">
+                        <h3>Video Editing</h3>
+                    </div>
+                    <div class="card-desc-section">
+                        <p>Cinematic storytelling. We piece together high-energy reels and dynamic visual media.</p>
+                    </div>
+                </div>
+
+                <div class="equal-card reveal premium-hover" style="transition-delay: 0.3s;">
+                    <div class="card-title-section">
+                        <h3>Content</h3>
+                    </div>
+                    <div class="card-desc-section">
+                        <p>Curating sharp, witty, and powerful scripts behind our massive events.</p>
+                    </div>
+                </div>
+
+                <div class="equal-card reveal premium-hover">
+                    <div class="card-title-section">
+                        <h3>Event Management</h3>
+                    </div>
+                    <div class="card-desc-section">
+                        <p>Turning plans into reality. Handling the logistics and ensuring every event runs like clockwork.</p>
+                    </div>
+                </div>
+
+                <div class="equal-card reveal premium-hover" style="transition-delay: 0.1s;">
+                    <div class="card-title-section">
+                        <h3>Creative</h3>
+                    </div>
+                    <div class="card-desc-section">
+                        <p>Innovating fresh, out-of-the-box entertainment and aesthetic strategies.</p>
+                    </div>
+                </div>
+
+                <div class="equal-card reveal premium-hover" style="transition-delay: 0.2s;">
+                    <div class="card-title-section">
+                        <h3>PR & Sponsor</h3>
+                    </div>
+                    <div class="card-desc-section">
+                        <p>Connecting with the corporate world and elevating our public relations.</p>
+                    </div>
+                </div>
+
+                <div class="equal-card reveal premium-hover" style="transition-delay: 0.3s;">
+                    <div class="card-title-section">
+                        <h3>Social Media</h3>
+                    </div>
+                    <div class="card-desc-section">
+                        <p>The digital voice. Masterfully handling online outreach, going viral, and keeping the campus engaged.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EVENTS -->
+        <section id="events" class="section page-section tab-container">
+            <div class="section-header reveal">
+                <h2>Event Showcases</h2>
+                <p class="section-text">A legacy of excellence. Explore the events hosted across different generations of Word Wizards.</p>
+            </div>
+            
+            <div class="highlight-banner reveal premium-hover">
+                <div class="highlight-info">
+                    <span class="highlight-badge">Coming Soon</span>
+                    <h3>Induction 2K26</h3>
+                    <p>The ultimate kickoff for the new session! Get ready to shatter your stage fear, meet the community, and begin your journey with Word Wizards.</p>
+                    <span class="btn-white">Details Coming Soon</span>
+                </div>
+                <div class="highlight-img-container">
+                    <img src="https://res.cloudinary.com/donf76gql/image/upload/v1779304510/ChatGPT_Image_May_21_2026_12_42_46_AM_emaulh.png" alt="Induction 2K26 Preview">
+                </div>
+            </div>
+
+            <div class="custom-tabs reveal">
+                <button class="tab-btn active premium-hover" data-tab="ev-c3">Council 3.0</button>
+                <button class="tab-btn premium-hover" data-tab="ev-c2">Council 2.0</button>
+                <button class="tab-btn premium-hover" data-tab="ev-c1">Council 1.0</button>
+            </div>
+
+            <div class="tab-content active" id="ev-c3">
+                <div class="tab-header-title reveal">Council 3.0 <span class="tab-badge" style="background: var(--accent-color); color: #fff; box-shadow: 0 5px 15px rgba(225, 29, 72, 0.3);">CURRENT</span></div>
+                <div class="event-card reveal">
+                    <div class="event-header">
+                        <div>
+                            <h3>Science Project Exhibition 2026</h3>
+                            <p>Phases 1 & 2</p>
+                        </div>
+                        <span>April & May 2026</span>
+                    </div>
+                    <div class="event-desc">
+                        A celebration of innovation and applied science. Students from all branches came together to build and display models that tackle real-world problems. 
+                    </div>
+                    <div class="photo-grid three-col premium-hover">
+                        <div class="img-wrap"><img loading="lazy" src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"></div>
+                        <div class="img-wrap"><img loading="lazy" src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"></div>
+                        <div class="img-wrap"><img loading="lazy" src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="ev-c2">
+                <div class="tab-header-title reveal">Council 2.0 <span class="tab-badge" style="background: var(--accent-color); color: #fff; box-shadow: 0 5px 15px rgba(225, 29, 72, 0.3);">LEGACY</span></div>
+                
+                <div class="event-card reveal">
+                    <div class="event-header">
+                        <div>
+                            <h3>60 Second Spotlight</h3>
+                            <p>A Stage for Emerging Leaders!</p>
+                        </div>
+                        <span>Event Showcase</span>
+                    </div>
+                    <div class="event-desc">
+                        In just one minute, participants faced high-pressure situations challenging their leadership, poise, and quick decision-making. Every second was a test of their ability to communicate confidently and think on their feet.
+                    </div>
+                    <div class="photo-grid premium-hover">
+                        <div class="img-wrap"><img loading="lazy" src="https://images.unsplash.com/photo-1511578314322-379afb476865?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"></div>
+                        <div class="img-wrap"><img loading="lazy" src="https://images.unsplash.com/photo-1544531586-fde5298cdd40?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"></div>
+                    </div>
+                </div>
+
+                <div class="event-card reveal">
+                    <div class="event-header">
+                        <div>
+                            <h3>Induction 2K25 (EngageOMania)</h3>
+                            <p>Rewind and Rise</p>
+                        </div>
+                        <span>August 2025</span>
+                    </div>
+                    <div class="event-desc">
+                        The ultimate welcome for the new batch. We combined high-energy entertainment with essential public speaking workshops to ensure every fresher started their college journey right.
+                    </div>
+                    <div class="photo-grid premium-hover">
+                        <div class="img-wrap"><img loading="lazy" src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"></div>
+                        <div class="img-wrap"><img loading="lazy" src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"></div>
+                        <div class="img-wrap"><img loading="lazy" src="https://images.unsplash.com/photo-1505236858219-8359eb29e329?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"></div>
+                    </div>
+                </div>
+
+                <div class="event-card reveal">
+                    <div class="event-header">
+                        <div>
+                            <h3>Escape Room 2.0</h3>
+                            <p>Last year, many tried. Few escaped. This year it was tougher.</p>
+                        </div>
+                        <span>19th-20th February</span>
+                    </div>
+                    <div class="event-desc">
+                        We transformed the campus into a massive puzzle box. Teams had to rely on flawless communication, rapid problem-solving, and complete trust to break out before time ran out.
+                    </div>
+                    <div class="photo-grid premium-hover">
+                        <div class="img-wrap"><img loading="lazy" src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"></div>
+                        <div class="img-wrap"><img loading="lazy" src="https://images.unsplash.com/photo-1605806616949-1e87b487cb2a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"></div>
+                    </div>
+                </div>
+
+                <div class="event-card reveal">
+                    <div class="event-header">
+                        <div>
+                            <h3>What if</h3>
+                            <p>Unstoppable creativity.</p>
+                        </div>
+                        <span>Legacy Event</span>
+                    </div>
+                    <div class="event-desc">
+                        Unforgettable stories born from a single prompt. The room came alive with moments that were nothing short of wonder. A huge shoutout to our former Council members for making their final event the greatest one yet!
+                    </div>
+                    <div class="photo-grid premium-hover">
+                        <div class="img-wrap"><img loading="lazy" src="https://images.unsplash.com/photo-1475721025505-c315a6ab3600?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"></div>
+                        <div class="img-wrap"><img loading="lazy" src="https://images.unsplash.com/photo-1515162816999-a0c47dc192f7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"></div>
+                        <div class="img-wrap"><img loading="lazy" src="https://images.unsplash.com/photo-1540317580384-e5d43867caa6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="ev-c1">
+                <div class="tab-header-title reveal">Council 1.0 <span class="tab-badge" style="background: var(--accent-color); color: #fff; box-shadow: 0 5px 15px rgba(225, 29, 72, 0.3);">#FOUNDERS</span></div>
+                
+                <div class="event-card reveal">
+                    <div class="event-header">
+                        <div>
+                            <h3>Just A Minute (JAM)</h3>
+                            <p>"You don't have to be great to start, but you have to start to be great."</p>
+                        </div>
+                        <span>3rd May 2024</span>
+                    </div>
+                    <div class="event-desc">
+                        Our flagship inaugural event! An exciting experience filled with laughter, wit, and spontaneous wizardry. It set the absolute standard for what Word Wizards would become.
+                    </div>
+                    <div class="photo-grid premium-hover">
+                        <div class="img-wrap"><img loading="lazy" src="https://images.unsplash.com/photo-1475721025505-c315a6ab3600?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="JAM Photo"></div>
+                        <div class="img-wrap"><img loading="lazy" src="https://images.unsplash.com/photo-1511578314322-379afb476865?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="JAM Photo"></div>
+                    </div>
+                </div>
+
+                <div class="event-card reveal">
+                    <div class="event-header">
+                        <div>
+                            <h3>Induction Programme 2024</h3>
+                            <p>Igniting the spark for the new session.</p>
+                        </div>
+                        <span>August 2024</span>
+                    </div>
+                    <div class="event-desc">
+                        The very first Induction. We took hundreds of incoming freshers and systematically broke down their public speaking anxieties through interactive games and elite anchoring workshops.
+                    </div>
+                    <div class="photo-grid premium-hover">
+                        <div class="img-wrap"><img loading="lazy" src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Induction Photo"></div>
+                        <div class="img-wrap"><img loading="lazy" src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Induction Photo"></div>
+                        <div class="img-wrap"><img loading="lazy" src="https://images.unsplash.com/photo-1505236858219-8359eb29e329?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Induction Photo"></div>
+                    </div>
+                </div>
+
+                <div class="event-card reveal">
+                    <div class="event-header">
+                        <div>
+                            <h3>Escape Room: The Final Exit</h3>
+                            <p>Trapped in the mystery, racing against time!</p>
+                        </div>
+                        <span>19th & 21st February 2025</span>
+                    </div>
+                    <div class="event-desc">
+                        Locked rooms. Hidden clues. Racing hearts. To all the brave players who stepped in to take the challenge—you were the real thrill of the event! The Final Exit challenged logic, teamwork, and nerves of steel.
+                    </div>
+                    <div class="photo-grid premium-hover">
+                        <div class="img-wrap"><img loading="lazy" src="https://images.unsplash.com/photo-1605806616949-1e87b487cb2a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Escape Room Photo"></div>
+                        <div class="img-wrap"><img loading="lazy" src="https://images.unsplash.com/photo-1615592389070-bcc97e0504d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Escape Room Photo"></div>
+                        <div class="img-wrap"><img loading="lazy" src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Escape Room Photo"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- COUNCIL -->
+        <section id="council" class="section alt-bg page-section tab-container">
+            <div class="section-header reveal">
+                <h2>The Council</h2>
+                <p class="section-text">The dedicated leaders guiding our first-year talent toward excellence across generations.</p>
+            </div>
+            
+            <div class="custom-tabs reveal">
+                <button class="tab-btn faculty-tab-btn premium-hover" data-tab="co-faculty">Faculty Coordinator</button>
+            </div>
+            <div class="custom-tabs reveal">
+                <button class="tab-btn active premium-hover" data-tab="co-c3">Council 3.0</button>
+                <button class="tab-btn premium-hover" data-tab="co-c2">Council 2.0</button>
+                <button class="tab-btn premium-hover" data-tab="co-c1">Council 1.0</button>
+            </div>
+
+            <!-- Tab Content: FACULTY COORDINATOR -->
+            <div class="tab-content" id="co-faculty">
+                <div class="tab-header-title reveal">Faculty Co&zwnj;ordinator <span class="tab-badge" style="background: var(--primary-text) !important;">LEADERSHIP</span></div>
+                <div class="faculty-profile-card reveal premium-hover">
+                    <div class="faculty-avatar-large" style="background-image: url('photos/faculty.jpg');"></div>
+                    <div class="faculty-details">
+                        <h3>Dr. Suraiya Farhat</h3>
+                        <p class="faculty-role">Faculty Co&zwnj;ordinator</p>
+                        <p class="faculty-desc">Providing the essential guidance, support, and institutional backing that allows Word Wizards to flourish as the premier student development society at ADGIPS.</p>
+                        <blockquote class="faculty-quote">"Our goal is not just to create good students, but to forge exceptional leaders, communicators, and creators who are fearless in the face of any challenge."</blockquote>
+                        <div class="faculty-extra">
+                            <span><strong>Department:</strong> Applied Sciences & Humanities</span>
+                            <span><strong>Contact:</strong> suraiya.farhat@adgips.ac.in</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab Content: Council 3.0 (Current) -->
+            <div class="tab-content active" id="co-c3">
+                <div class="tab-header-title reveal">Council 3.0 <span class="tab-badge">CURRENT</span></div>
+                
+                <div class="council-grid">
+                    <div class="card-container premium-hover" data-name="Kashish" data-role="Vice President" data-img="photos/kashish.jpg" data-desc="As the Vice President, Kashish ensures the seamless execution of our vision, bridging the gap between creativity and flawless administration." data-insta="https://www.instagram.com/pvt_kash13?igsh=MXd0bXYybHNpMGkyeA==" data-linkedin="https://www.linkedin.com/in/kashish-negi-a828ab3a3?utm_source=share_via&utm_content=profile&utm_medium=member_android">
+                        <div class="team-card reveal">
+                            <div class="avatar" style="background-image: url('photos/kashish.jpg');"></div>
+                            <h3>Kashish</h3><p>Vice President</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card-container premium-hover" style="transition-delay: 0.1s;" data-name="Lavnish" data-role="President" data-img="https://res.cloudinary.com/donf76gql/image/upload/v1781524544/L4vnish_dutxul.jpg" data-desc="The driving force of Word Wizards. Lavnish leads the society with passion, empowering every first-year student to break boundaries and achieve excellence." data-insta="https://www.instagram.com/l4vnish?igsh=MTRjdXRkN3Y3MGptNw==" data-linkedin="https://www.linkedin.com/in/lavnish-99abb5179?utm_source=share_via&utm_content=profile&utm_medium=member_android">
+                        <div class="team-card reveal">
+                            <div class="avatar" style="background-image: url('https://res.cloudinary.com/donf76gql/image/upload/v1781524544/L4vnish_dutxul.jpg');"></div>
+                            <h3>Lavnish</h3><p>President</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card-container premium-hover" style="transition-delay: 0.2s;" data-name="Shaurya" data-role="General Secretary" data-img="https://i.ibb.co/yBWyc8CR/Copy-of-IMG-1406.jpg" data-desc="Shaurya is the operational mastermind behind Word Wizards. He manages the core structure of the society, ensuring every event runs like clockwork." data-insta="https://www.instagram.com/shauryaanchal" data-linkedin="https://www.linkedin.com/in/shaurya-anchal/">
+                        <div class="team-card reveal">
+                            <div class="avatar" style="background-image: url('https://i.ibb.co/yBWyc8CR/Copy-of-IMG-1406.jpg');"></div>
+                            <h3>Shaurya</h3><p>General Secretary</p>
+                        </div>
+                    </div>
+
+                    <div class="card-container premium-hover" data-name="Manaswani" data-role="Graphics Co-Head" data-img="https://i.ibb.co/wN9tZ48j/manasvani.jpg" data-desc="Manasvani shapes the visual identity of our society. Her keen eye for design turns raw ideas into stunning, professional graphics." data-insta="#" data-linkedin="#">
+                        <div class="team-card reveal">
+                            <div class="avatar" style="background-image: url('https://i.ibb.co/wN9tZ48j/manasvani.jpg');"></div>
+                            <h3>Manaswani Gandhi</h3><p>Graphics Co-Head</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card-container premium-hover" style="transition-delay: 0.1s;" data-name="Tripti Ghildiyal" data-role="Social Media Head" data-img="https://res.cloudinary.com/donf76gql/image/upload/v1779304507/WhatsApp_Image_2026-05-20_at_7.34.13_PM_pixi8g.jpg" data-desc="The voice of our digital presence. Tripti masterfully handles our online outreach, keeping the campus engaged and hyped for what is next." data-insta="#" data-linkedin="#">
+                        <div class="team-card reveal">
+                            <div class="avatar" style="background-image: url('https://res.cloudinary.com/donf76gql/image/upload/v1779304507/WhatsApp_Image_2026-05-20_at_7.34.13_PM_pixi8g.jpg');"></div>
+                            <h3>Tripti Ghildiyal</h3><p>Social Media Head</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card-container premium-hover" style="transition-delay: 0.2s;" data-name="Tanya Thakur" data-role="Graphics Co-Head" data-img="photos/tanya.jpg" data-desc="Tanya brings imagination to the screen. Co-leading the graphics division, she ensures our branding is consistently premium and eye-catching." data-insta="https://www.instagram.com/tanya.thakur._?igsh=MXNpdW9ramUwcjY5aw==" data-linkedin="https://www.linkedin.com/in/tanya-thakur-2aaa2637b?utm_source=share_via&utm_content=profile&utm_medium=member_android">
+                        <div class="team-card reveal">
+                            <div class="avatar" style="background-image: url('photos/tanya.jpg');"></div>
+                            <h3>Tanya Thakur</h3><p>Graphics Co-Head</p>
+                        </div>
+                    </div>
+
+                    <div class="card-container premium-hover" data-name="Aprajita" data-role="Anchoring Head" data-img="https://res.cloudinary.com/donf76gql/image/upload/v1779095965/aprajita_y5xc8r.jpg" data-desc="Aprajita owns the stage. She trains our members in the art of crowd control, perfect articulation, and commanding an audience as an elite anchor." data-insta="https://www.instagram.com/aprajitashh?igsh=MWU0NTgycXQ3MXJxeA%3D%3D&utm_source=qr" data-linkedin="https://www.linkedin.com/in/aprajita-sharma-ba2783365?utm_source=share_via&utm_content=profile&utm_medium=member_ios">
+                        <div class="team-card reveal">
+                            <div class="avatar" style="background-image: url('https://res.cloudinary.com/donf76gql/image/upload/v1779095965/aprajita_y5xc8r.jpg');"></div>
+                            <h3>Aprajita</h3><p>Anchoring Head</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card-container premium-hover" style="transition-delay: 0.1s;" data-name="Sangini" data-role="Creative Head" data-img="https://res.cloudinary.com/donf76gql/image/upload/v1779095963/sangini_aqm2l8.jpg" data-desc="The visionary behind our concepts. Sangini constantly innovates, bringing fresh, out-of-the-box entertainment and creative strategies to life." data-insta="https://www.instagram.com/shynini_118/" data-linkedin="https://www.linkedin.com/in/sangini-sharma-0259043a3">
+                        <div class="team-card reveal">
+                            <div class="avatar" style="background-image: url('https://res.cloudinary.com/donf76gql/image/upload/v1779095963/sangini_aqm2l8.jpg');"></div>
+                            <h3>Sangini</h3><p>Creative Head</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card-container premium-hover" style="transition-delay: 0.2s;" data-name="Drishti Sahu" data-role="Event Head" data-img="https://res.cloudinary.com/donf76gql/image/upload/v1779095963/drishti_y6dvnj.jpg" data-desc="Drishti turns plans into reality. She coordinates the logistics and on-ground execution, making sure every Word Wizards event is a massive success." data-insta="https://www.instagram.com/drishtisahu58?igsh=NzNuNmQ0MGliYTc3" data-linkedin="https://www.linkedin.com/in/drishti-sahu-810943335">
+                        <div class="team-card reveal">
+                            <div class="avatar" style="background-image: url('https://res.cloudinary.com/donf76gql/image/upload/v1779095963/drishti_y6dvnj.jpg');"></div>
+                            <h3>Drishti Sahu</h3><p>Event Head</p>
+                        </div>
+                    </div>
+
+                    <div class="card-container premium-hover" data-name="Ansh Bhatt" data-role="PR & Sponsorship Head" data-img="https://res.cloudinary.com/donf76gql/image/upload/v1779095968/ansh_cv7sfk.jpg" data-desc="Ansh handles the external relationships. He connects Word Wizards with the corporate world, securing sponsorships and building our public relations." data-insta="https://www.instagram.com/anxhh.bhatt/" data-linkedin="https://www.linkedin.com/in/anshbhatt2006/">
+                        <div class="team-card reveal">
+                            <div class="avatar" style="background-image: url('https://res.cloudinary.com/donf76gql/image/upload/v1779095968/ansh_cv7sfk.jpg');"></div>
+                            <h3>Ansh Bhatt</h3><p>PR & Sponsorship Head</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card-container premium-hover" style="transition-delay: 0.1s;" data-name="Shivam Kaushik" data-role="Video Editing Head" data-img="https://res.cloudinary.com/donf76gql/image/upload/v1779095966/shivam_hnmhth.jpg" data-desc="The cinematic genius. Shivam pieces together footage into high-energy, premium reels and teaches our members the art of visual storytelling." data-insta="https://www.instagram.com/shivamm.kaushik/" data-linkedin="https://www.linkedin.com/in/shivam-kaushik-946443377/">
+                        <div class="team-card reveal">
+                            <div class="avatar" style="background-image: url('https://res.cloudinary.com/donf76gql/image/upload/v1779095966/shivam_hnmhth.jpg');"></div>
+                            <h3>Shivam Kaushik</h3><p>Video Editing Head</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card-container premium-hover" style="transition-delay: 0.2s;" data-name="Pratyush Kumar Jha" data-role="Content Head" data-img="https://res.cloudinary.com/donf76gql/image/upload/v1779095971/pratyush_svvzsf.jpg" data-desc="The wordsmith. Pratyush curates the scripts, captions, and communication strategies, ensuring our message is always sharp, witty, and powerful." data-insta="#" data-linkedin="#">
+                        <div class="team-card reveal">
+                            <div class="avatar" style="background-image: url('https://res.cloudinary.com/donf76gql/image/upload/v1779095971/pratyush_svvzsf.jpg');"></div>
+                            <h3>Pratyush Kumar Jha</h3><p>Content Head</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab Content: Council 2.0 Table -->
+            <div class="tab-content" id="co-c2">
+                <div class="tab-header-title reveal">Council 2.0 <span class="tab-badge">LEGACY</span></div>
+                <div class="legacy-table-container reveal">
+                    <div class="legacy-row"><span class="legacy-role">President</span><span class="legacy-name">Vishv Dhama</span></div>
+                    <div class="legacy-row"><span class="legacy-role">Vice President</span><span class="legacy-name">Nikunj Sharma</span></div>
+                    <div class="legacy-row"><span class="legacy-role">General Secretary</span><span class="legacy-name">Srishti Aggarwal</span></div>
+                    <div class="legacy-row"><span class="legacy-role">Event Management Head</span><span class="legacy-name">Rishabh Kumar</span></div>
+                    <div class="legacy-row"><span class="legacy-role">Creative Head</span><span class="legacy-name">Aman Giri</span></div>
+                    <div class="legacy-row"><span class="legacy-role">Social Media Head</span><span class="legacy-name">Mohit Chauhan</span></div>
+                    <div class="legacy-row"><span class="legacy-role">Social Media Co-Head</span><span class="legacy-name">Mohammad Riyan</span></div>
+                    <div class="legacy-row"><span class="legacy-role">Graphics Head</span><span class="legacy-name">Granth Chawla</span></div>
+                    <div class="legacy-row"><span class="legacy-role">Graphics Co-Head</span><span class="legacy-name">Avanya</span></div>
+                    <div class="legacy-row"><span class="legacy-role">Content Head</span><span class="legacy-name">Nikhil Garg</span></div>
+                    <div class="legacy-row"><span class="legacy-role">Anchoring Head</span><span class="legacy-name">Nidhi Jha</span></div>
+                    <div class="legacy-row"><span class="legacy-role">PR and Marketing Head</span><span class="legacy-name">Rohit Bhattacharya</span></div>
+                </div>
+            </div>
+
+            <!-- Tab Content: Council 1.0 Table WITH FOUNDERS BADGE -->
+            <div class="tab-content" id="co-c1">
+                <div class="tab-header-title reveal">Council 1.0 <span class="tab-badge">#FOUNDERS</span></div>
+                <div class="legacy-table-container reveal">
+                    <div class="legacy-row"><span class="legacy-role">President</span><span class="legacy-name">Ojasvi Bhatnagar</span></div>
+                    <div class="legacy-row"><span class="legacy-role">Vice President</span><span class="legacy-name">Piyush Verma</span></div>
+                    <div class="legacy-row"><span class="legacy-role">General Secretary</span><span class="legacy-name">Shaurya Pratap Singh</span></div>
+                    <div class="legacy-row"><span class="legacy-role">Event Head</span><span class="legacy-name">Nishita Aggarwal</span></div>
+                    <div class="legacy-row"><span class="legacy-role">Graphics Head</span><span class="legacy-name">Shaurya Chopra</span></div>
+                    <div class="legacy-row"><span class="legacy-role">Content Head</span><span class="legacy-name">Vaishali Kumari</span></div>
+                    <div class="legacy-row"><span class="legacy-role">Creative Head</span><span class="legacy-name">Palak</span></div>
+                    <div class="legacy-row"><span class="legacy-role">Social Media Head</span><span class="legacy-name">Vani Gupta</span></div>
+                </div>
+            </div>
+            
+        </section>
+        
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3>Our Mission</h3>
+                <p>Knowledge of everything. Fear of nothing. We are the premier first-year student development society of ADGIPS, building the leaders of tomorrow.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <a class="nav-trigger premium-hover" data-target="#about" style="cursor:none;">Our Story</a>
+                <a class="nav-trigger premium-hover" data-target="#departments" style="cursor:none;">Departments</a>
+                <a class="nav-trigger premium-hover" data-target="#events" style="cursor:none;">Events</a>
+                <a class="nav-trigger premium-hover" data-target="#council" style="cursor:none;">Meet the Council</a>
+            </div>
+            <div class="footer-col" style="display: flex; flex-direction: column; align-items: flex-start;">
+                <h3 style="width: 100%;">Connect With Us</h3>
+                <div class="footer-socials">
+                    <a href="https://www.instagram.com/word.wizards.adgips/" target="_blank" rel="noopener noreferrer" class="premium-hover" aria-label="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 1.748-6.983 6.096-.058 1.28-.072 1.688-.072 4.947s.014 3.667.072 4.947c.203 4.348 2.625 5.896 6.983 6.096 1.28.058 1.688.072 4.947.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-1.748 6.979-6.096.059-1.28.073-1.687.073-4.947s-.014-3.667-.072-4.947c-.196-4.354-2.617-5.896-6.979-6.096-1.28-.058-1.689-.072-4.948-.072zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/company/word-wizards-adgips/?viewAsMember=true" target="_blank" rel="noopener noreferrer" class="premium-hover" aria-label="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
+                    <a href="mailto:wordwizards@adgips.ac.in" class="premium-hover" aria-label="Email">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Word Wizards, ADGIPS. Designed with passion.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
