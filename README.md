@@ -2,94 +2,100 @@
 
 <div align="center">
 
-### The Official First-Year Student Development Society of ADGIPS
+<img src="https://i.ibb.co/kgN9XqFB/Word-Wizards-1.png" width="180" alt="Word Wizards Logo">
 
-**Empower • Create • Lead • Grow**
+# Word Wizards
+
+### Official First-Year Student Development Society of ADGIPS
 
 🌐 **Live Website:** https://wordwizardsadgips.in/
-📂 **Repository:** https://github.com/shauryaanchalop/word-wizards
+
+📂 **GitHub Repository:** https://github.com/shauryaanchalop/word-wizards
+
+---
+
+**Empower • Create • Lead • Grow**
 
 </div>
 
 ---
 
-## 📖 About
+## 📖 About The Project
 
-Word Wizards is the official First-Year Student Development Society of **Akhilesh Das Gupta Institute of Professional Studies (ADGIPS)**. The society is dedicated to helping students unlock their potential through communication, leadership, creativity, technical skills, event management, and personal development. Word Wizards is recognized as the official student development society for first-year students at ADGIPS.
+Word Wizards is the official First-Year Student Development Society of **Akhilesh Das Gupta Institute of Professional Studies (ADGIPS)**.
 
-This website serves as the digital identity of the society, showcasing its mission, departments, events, leadership team, and achievements through a modern and immersive web experience.
+This website serves as the society's digital identity, showcasing:
+
+* Society Vision & Mission
+* Departments
+* Events & Activities
+* Council Members
+* Faculty Coordinators
+* Student Development Initiatives
+
+The platform is designed with a premium modern UI, immersive animations, responsive layouts, and interactive experiences to create a memorable first impression for students.
 
 ---
 
-## 🌐 Live Demo
+## 🌐 Live Website
 
-### Visit the Website
+Visit the official website:
 
-👉 https://wordwizardsadgips.in/
-
-Experience:
-
-* Cinematic landing page
-* Interactive council showcase
-* Event galleries
-* Department highlights
-* Smooth animations
-* Responsive design
+### 👉 https://wordwizardsadgips.in/
 
 ---
 
 ## 🚀 Features
 
-### 🎭 Modern User Experience
+### 🎨 Modern Design
 
-* Premium glassmorphism navigation
-* Video-powered hero section
-* Custom animated cursor
-* Smooth transitions
-* Elegant typography
-* Mobile-first responsiveness
+* Glassmorphism Navigation
+* Cinematic Hero Section
+* Premium Typography
+* Modern Card Layouts
+* Interactive Hover Effects
+* Elegant Animations
 
-### ⚡ Advanced Interactions
+### ⚡ Interactive Experience
 
-* GSAP animations
-* Scroll-triggered effects
-* Dynamic modals
-* Image lightbox system
-* Interactive member profiles
-* Tab-based event showcases
+* GSAP Animations
+* Scroll Trigger Effects
+* Smooth Navigation
+* Dynamic Member Profiles
+* Event Showcase Tabs
+* Image Lightbox System
 
 ### 📱 Responsive Design
 
-* Desktop optimized
-* Tablet optimized
-* Mobile optimized
-* Touch-friendly navigation
+* Mobile Friendly
+* Tablet Optimized
+* Desktop Optimized
+* Cross-Browser Compatible
 
-### 🎨 Premium Visual Design
+### 🎭 User Experience
 
-* Rose & pink luxury theme
-* Modern card layouts
-* Gradient highlights
-* Micro-interactions
-* Cinematic motion effects
+* Smooth Transitions
+* Interactive UI Components
+* Engaging Visual Storytelling
+* Performance-Oriented Design
 
 ---
 
-## 🏛 Society Departments
+## 🏛 Departments
 
 The website highlights all major departments of Word Wizards:
 
-| Department          | Focus Area                              |
-| ------------------- | --------------------------------------- |
-| 🎤 Anchoring        | Public Speaking & Stage Management      |
-| 🎨 Graphics         | Designing Posters, Creatives & Branding |
-| 🎬 Video Editing    | Reels, Promos & Event Coverage          |
-| ✍️ Content          | Scripts, Captions & Creative Writing    |
-| 🎪 Event Management | Planning & Executing Events             |
-| 💡 Creative         | Ideas, Concepts & Entertainment         |
-| 🤝 PR & Sponsorship | Partnerships & Outreach                 |
-| 📱 Social Media     | Digital Presence & Marketing            |
-| 💻 Technical        | Development & Innovation                |
+| Department          | Description                      |
+| ------------------- | -------------------------------- |
+| 🎤 Anchoring        | Stage Presence & Public Speaking |
+| 🎨 Graphics         | Design & Branding                |
+| 🎬 Video Editing    | Reels & Promotional Content      |
+| ✍️ Content          | Scripts & Creative Writing       |
+| 🎪 Event Management | Planning & Execution             |
+| 💡 Creative         | Ideas & Innovation               |
+| 🤝 PR & Sponsorship | Networking & Partnerships        |
+| 📱 Social Media     | Online Presence                  |
+| 💻 Technical        | Web & Technology                 |
 
 ---
 
@@ -97,27 +103,27 @@ The website highlights all major departments of Word Wizards:
 
 ### 🏠 Home
 
-An immersive landing experience featuring a cinematic video background and animated call-to-action elements.
+Immersive landing page featuring video backgrounds and premium animations.
 
 ### 📚 About
 
-Learn about the vision, mission, and objectives of Word Wizards.
+Introduction to Word Wizards, its vision, mission, and objectives.
 
 ### 🏛 Departments
 
-Explore the specialized departments that empower students to learn and grow.
+Detailed overview of all society departments.
 
-### 🎉 Events
+### 🎊 Events
 
-A showcase of current and past events conducted by different council generations.
+Showcases events, workshops, competitions, and activities.
 
 ### 👥 Council
 
-Meet the leadership team and executive members of Word Wizards.
+Interactive profiles of executive and core members.
 
 ### 👨‍🏫 Faculty
 
-Dedicated faculty coordinators guiding the society's growth.
+Faculty coordinators and mentors guiding the society.
 
 ---
 
@@ -129,24 +135,22 @@ Dedicated faculty coordinators guiding the society's growth.
 * CSS3
 * JavaScript (ES6)
 
-### Libraries & Frameworks
+### Libraries
 
-* GSAP 3
+* GSAP
 * ScrollTrigger
 * Lenis Smooth Scroll
 
-### Typography
+### Fonts
 
 * Poppins
 * Playfair Display
 * Cinzel Decorative
 * Montserrat
 
-### Media Sources
+### Media Hosting
 
 * Cloudinary
-* Unsplash
-* Custom Society Assets
 
 ---
 
@@ -160,12 +164,7 @@ word-wizards/
 ├── script.js
 ├── README.md
 │
-├── assets/
-│   ├── images/
-│   ├── videos/
-│   └── logos/
-│
-└── screenshots/
+└── assets/
 ```
 
 ---
@@ -178,93 +177,63 @@ word-wizards/
 git clone https://github.com/shauryaanchalop/word-wizards.git
 ```
 
-### Open Project
+### Navigate to Project
 
 ```bash
 cd word-wizards
 ```
 
-### Run Locally
+### Run Website
 
-Simply open:
+Open:
 
 ```bash
 index.html
 ```
 
-or use VS Code Live Server.
-
----
-
-## 🔗 External Dependencies
-
-### GSAP
-
-```html
-https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js
-```
-
-### ScrollTrigger
-
-```html
-https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js
-```
-
-### Lenis
-
-```html
-https://unpkg.com/@studio-freight/lenis@1.0.39/dist/lenis.min.js
-```
-
-### Google Fonts
-
-```html
-https://fonts.googleapis.com
-```
+Or use VS Code Live Server.
 
 ---
 
 ## 🌟 Why Word Wizards?
 
-Word Wizards helps first-year students develop:
+Word Wizards provides first-year students opportunities to develop:
 
-* 🎤 Public Speaking
-* 🧠 Leadership Skills
-* 🤝 Team Collaboration
-* 🎨 Graphic Designing
-* 🎬 Video Editing
-* 📱 Social Media Management
-* 💻 Technical Skills
-* 🎪 Event Management
-* ✍️ Content Creation
-* 🚀 Confidence & Personality Development
-
----
-
-## 📱 Browser Compatibility
-
-| Browser | Support |
-| ------- | ------- |
-| Chrome  | ✅       |
-| Edge    | ✅       |
-| Firefox | ✅       |
-| Safari  | ✅       |
-| Opera   | ✅       |
+* Leadership Skills
+* Public Speaking
+* Communication Skills
+* Graphic Designing
+* Video Editing
+* Technical Skills
+* Event Management
+* Team Collaboration
+* Creativity & Innovation
+* Confidence Building
 
 ---
 
-## 🔮 Future Roadmap
+## 📱 Browser Support
 
-* Member Registration Portal
+| Browser         | Support |
+| --------------- | ------- |
+| Google Chrome   | ✅       |
+| Microsoft Edge  | ✅       |
+| Mozilla Firefox | ✅       |
+| Safari          | ✅       |
+| Opera           | ✅       |
+
+---
+
+## 🔮 Future Improvements
+
+* Online Membership Portal
 * Admin Dashboard
-* Dynamic Event Management
-* Attendance Tracking
-* Announcement System
-* Blog Platform
-* Authentication & Roles
-* Database Integration
+* Event Registration System
+* Attendance Management
+* Dynamic Content Management
 * Alumni Network
 * Achievement Tracking
+* Blog Section
 
 ---
 
@@ -272,36 +241,39 @@ Word Wizards helps first-year students develop:
 
 ### Shaurya Anchal
 
-General Secretary, Word Wizards ADGIPS
-CSE Student, ADGIPS (GGSIPU)
+**General Secretary, Word Wizards ADGIPS**
 
-GitHub: https://github.com/shauryaanchalop
+* GitHub: https://github.com/shauryaanchalop
+* Website: https://wordwizardsadgips.in/
 
 ---
 
 ## 🤝 Contributing
 
-Contributions, suggestions, and improvements are welcome.
+Contributions, ideas, and improvements are always welcome.
 
 1. Fork the repository
-2. Create a feature branch
+2. Create a new branch
 3. Commit your changes
 4. Open a Pull Request
 
 ---
 
-## 📜 License
+## ⭐ Support
 
-This project is developed for educational and organizational purposes for Word Wizards ADGIPS.
+If you like this project, consider giving it a ⭐ on GitHub.
+
+Repository:
+
+https://github.com/shauryaanchalop/word-wizards
 
 ---
 
 <div align="center">
 
-### ⭐ If you like this project, don't forget to star the repository!
+### Word Wizards ADGIPS
 
-**Word Wizards ADGIPS**
-*Igniting the Potential.*
+**Igniting the Potential.**
 
 🌐 https://wordwizardsadgips.in/
 
