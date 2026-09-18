@@ -7,8 +7,13 @@
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
-
         @media (hover: hover) and (pointer: fine) { * { cursor: none !important; } }
+        @media not all and (hover: hover) and (pointer: fine) {
+            * { cursor: auto !important; }
+            a, button, .tab-btn, .btn-white, .close-modal-btn, .lightbox-close-btn, .img-wrap, .card-container, .logo, .cta-button {
+                cursor: pointer !important;
+            }
+        }
 
         /* Lock X-axis strictly to avoid mobile wobble */
         html, body { max-width: 100vw; overflow-x: hidden !important; width: 100%; }
@@ -167,6 +172,11 @@
         .tech-badge { background: var(--accent-color); color: #fff; padding: 5px 15px; border-radius: 50px; font-size: 0.8rem; font-weight: 700; letter-spacing: 2px; display: inline-block; margin-bottom: 1.5rem; animation: pulse-glow 2s infinite; }
         .tech-highlight-card h3 { font-size: 2.5rem; font-family: 'Playfair Display', serif; margin-bottom: 1rem; color: #fff; }
         .tech-highlight-card p { font-size: 1.1rem; color: rgba(255,255,255,0.8); max-width: 800px; margin: 0 auto; line-height: 1.8; }
+        @media (max-width: 768px) {
+            .tech-highlight-card { padding: 2.5rem 1.4rem; border-radius: 20px; }
+            .tech-highlight-card h3 { font-size: 1.8rem; }
+            .tech-highlight-card p { font-size: 0.95rem; line-height: 1.6; }
+        }
 
         .equal-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; max-width: 1200px; margin: 0 auto; }
         @media (max-width: 1024px) { .equal-grid { grid-template-columns: repeat(2, 1fr); } }
@@ -219,12 +229,25 @@
         .highlight-badge { display: inline-block; background: rgba(255,255,255,0.2); padding: 5px 15px; border-radius: 50px; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; margin-bottom: 1rem; backdrop-filter: blur(5px); border: 1px solid rgba(255,255,255,0.4); animation: pulse-glow 2s infinite; }
         @keyframes pulse-glow { 0% { box-shadow: 0 0 0 0 rgba(255,255,255,0.4); } 70% { box-shadow: 0 0 0 10px rgba(255,255,255,0); } 100% { box-shadow: 0 0 0 0 rgba(255,255,255,0); } }
         .highlight-info p { color: rgba(255,255,255,0.9); font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem; }
-        .btn-white { background: rgba(255,255,255,0.15); color: #fff; padding: 0.8rem 2rem; border-radius: 50px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; border: 1px solid rgba(255,255,255,0.4); display: inline-block; cursor: default; backdrop-filter: blur(5px); }
+        .btn-white { background: rgba(255,255,255,0.15); color: #fff; padding: 0.8rem 2rem; border-radius: 50px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; border: 1px solid rgba(255,255,255,0.4); display: inline-block; text-decoration: none; transition: all 0.3s ease; backdrop-filter: blur(5px); }
+        @media (hover: hover) and (pointer: fine) {
+            .btn-white:hover { background: #fff; color: var(--accent-color); transform: translateY(-3px); box-shadow: 0 10px 25px rgba(0,0,0,0.25); }
+        }
+        .btn-white:active { transform: scale(0.95); }
         
         .highlight-img-container { flex: 1; width: 100%; height: 300px; border-radius: 16px; overflow: hidden; box-shadow: 0 15px 30px rgba(0,0,0,0.3); background-color: #fff; }
         .highlight-img-container img { display: block; width: 100%; height: 100%; object-fit: cover !important; object-position: center; transform: scale(1.03); }
         
-        @media (max-width: 768px) { .highlight-banner { flex-direction: column; text-align: center; padding: 2rem; } .highlight-img-container { width: 100%; height: 250px; } }
+        @media (max-width: 768px) { 
+            .highlight-banner { flex-direction: column; text-align: center; padding: 2.2rem 1.4rem; gap: 1.8rem; width: 100%; border-radius: 24px; } 
+            .highlight-img-container { width: 100%; height: clamp(200px, 55vw, 280px); border-radius: 14px; } 
+            .highlight-info h3 { font-size: clamp(1.8rem, 6vw, 2.4rem); word-break: break-word; }
+            .highlight-info p { font-size: 1rem; line-height: 1.6; }
+        }
+        @media (max-width: 480px) {
+            .highlight-banner { padding: 1.8rem 1rem; }
+            .btn-white { padding: 0.75rem 1.6rem; font-size: 0.85rem; width: 100%; max-width: 280px; text-align: center; }
+        }
 
         /* Event Cards */
         .event-card { max-width: 1100px; margin: 0 auto 3rem auto; background: #fff; border-radius: 24px; padding: 2.5rem; text-align: left; box-shadow: 0 15px 35px rgba(112, 26, 59, 0.05); border: 1px solid rgba(252, 231, 243, 0.8); }
@@ -236,7 +259,12 @@
         .photo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; grid-auto-rows: 220px; }
         .photo-grid.three-col { grid-template-columns: repeat(3, 1fr); }
         @media(max-width: 768px){ 
-            .photo-grid { grid-template-columns: 1fr !important; grid-auto-rows: 250px; display: grid !important; overflow: hidden !important; }
+            .event-card { padding: 1.8rem 1.25rem; border-radius: 20px; margin-bottom: 2rem; }
+            .event-header { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+            .event-header h3 { font-size: clamp(1.4rem, 5vw, 1.8rem); line-height: 1.3; }
+            .event-header span { font-size: 0.8rem; }
+            .event-desc { font-size: 0.98rem; line-height: 1.65; margin-bottom: 1.5rem; }
+            .photo-grid { grid-template-columns: 1fr !important; grid-auto-rows: clamp(200px, 55vw, 260px); display: grid !important; overflow: hidden !important; }
             .photo-grid.three-col { grid-template-columns: 1fr !important; display: grid !important; overflow: hidden !important; }
         }
         
@@ -381,3 +409,10 @@
         .footer-socials svg { width: 22px; height: 22px; fill: currentColor; }
 
         .footer-bottom { text-align: center; font-size: 0.85rem; color: rgba(252, 231, 243, 0.3); letter-spacing: 1px; padding-bottom: 1.5rem; position: relative; z-index: 1; margin-top: 2rem;}
+
+        @media (max-width: 480px) {
+            .section { padding: 3.5rem 1rem; }
+            .section-header { margin-bottom: 2.5rem; }
+            .section-header h2 { font-size: clamp(1.8rem, 6vw, 2.5rem); }
+            .tab-btn { padding: 0.7rem 1.4rem !important; font-size: 0.85rem !important; }
+        }
