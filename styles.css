@@ -17,6 +17,7 @@
 
         /* Lock X-axis strictly to avoid mobile wobble */
         html, body { max-width: 100vw; overflow-x: hidden !important; width: 100%; }
+        html { scroll-padding-top: 100px; }
 
         body {
             font-family: 'Poppins', sans-serif; color: var(--text-body); line-height: 1.8;
@@ -86,6 +87,8 @@
         @media (max-width: 900px) {
             .navbar { border-radius: 20px; top: 15px; padding: 1rem 1.5rem; }
             .hamburger { display: flex; }
+            .section { padding: 7.5rem 5% 4rem 5%; }
+            .hero { padding-top: 95px; }
             .nav-links { 
                 position: fixed; top: 0; right: -120%; 
                 width: 100%; height: 100dvh; background: rgba(255, 245, 248, 0.98); backdrop-filter: blur(25px); 
@@ -144,7 +147,7 @@
         @keyframes bounce { 0%, 100% { transform: translate(-50%, 0); } 50% { transform: translate(-50%, -10px); } }
         @keyframes scrollDown { 0% { top: -50%; } 100% { top: 100%; } }
 
-        .section { padding: clamp(5rem, 10vw, 8rem) clamp(5%, 10vw, 10%); text-align: center; }
+        .section { padding: clamp(7rem, 10vw, 8.5rem) clamp(5%, 10vw, 10%); text-align: center; }
         .alt-bg { background-color: var(--bg-alt); }
         .section-header { text-align: center; margin-bottom: 4rem; }
         .section-header h2 { font-family: 'Cinzel Decorative', serif; font-size: clamp(2.5rem, 6vw, 3.5rem); margin-bottom: 1.5rem; color: var(--primary-text); text-transform: uppercase; }
@@ -411,7 +414,7 @@
         .footer-bottom { text-align: center; font-size: 0.85rem; color: rgba(252, 231, 243, 0.3); letter-spacing: 1px; padding-bottom: 1.5rem; position: relative; z-index: 1; margin-top: 2rem;}
 
         @media (max-width: 480px) {
-            .section { padding: 3.5rem 1rem; }
+            .section { padding: 7rem 1rem 3.5rem 1rem; }
             .section-header { margin-bottom: 2.5rem; }
             .section-header h2 { font-size: clamp(1.8rem, 6vw, 2.5rem); }
             .tab-btn { padding: 0.7rem 1.4rem !important; font-size: 0.85rem !important; }
