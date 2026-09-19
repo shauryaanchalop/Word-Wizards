@@ -231,8 +231,9 @@
         .highlight-info h3 { font-size: 2.8rem; margin-bottom: 0.5rem; color: #fff; font-family: 'Cinzel Decorative', serif; font-variant-ligatures: none; font-feature-settings: "liga" 0;}
         .highlight-badge { display: inline-block; background: rgba(255,255,255,0.2); padding: 5px 15px; border-radius: 50px; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; margin-bottom: 1rem; backdrop-filter: blur(5px); border: 1px solid rgba(255,255,255,0.4); animation: pulse-glow 2s infinite; }
         @keyframes pulse-glow { 0% { box-shadow: 0 0 0 0 rgba(255,255,255,0.4); } 70% { box-shadow: 0 0 0 10px rgba(255,255,255,0); } 100% { box-shadow: 0 0 0 0 rgba(255,255,255,0); } }
-        .highlight-info p { color: rgba(255,255,255,0.9); font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem; }
-        .btn-white { background: rgba(255,255,255,0.15); color: #fff; padding: 0.8rem 2rem; border-radius: 50px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; border: 1px solid rgba(255,255,255,0.4); display: inline-block; text-decoration: none; transition: all 0.3s ease; backdrop-filter: blur(5px); }
+        .highlight-info p { color: rgba(255,255,255,0.92); font-size: 1.08rem; line-height: 1.8; margin-bottom: 2rem; }
+        .highlight-banner-actions { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+        .btn-white { font-family: inherit; font-size: 0.9rem; line-height: 1.4; background: rgba(255,255,255,0.15); color: #fff; padding: 0.8rem 2rem; border-radius: 50px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; border: 1px solid rgba(255,255,255,0.4); display: inline-flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.3s ease; backdrop-filter: blur(5px); cursor: pointer; outline: none; }
         @media (hover: hover) and (pointer: fine) {
             .btn-white:hover { background: #fff; color: var(--accent-color); transform: translateY(-3px); box-shadow: 0 10px 25px rgba(0,0,0,0.25); }
         }
@@ -245,11 +246,13 @@
             .highlight-banner { flex-direction: column; text-align: center; padding: 2.2rem 1.4rem; gap: 1.8rem; width: 100%; border-radius: 24px; } 
             .highlight-img-container { width: 100%; height: clamp(200px, 55vw, 280px); border-radius: 14px; } 
             .highlight-info h3 { font-size: clamp(1.8rem, 6vw, 2.4rem); word-break: break-word; }
-            .highlight-info p { font-size: 1rem; line-height: 1.6; }
+            .highlight-info p { font-size: 1rem; line-height: 1.6; margin-bottom: 1.6rem; }
+            .highlight-banner-actions { justify-content: center; }
         }
         @media (max-width: 480px) {
             .highlight-banner { padding: 1.8rem 1rem; }
             .btn-white { padding: 0.75rem 1.6rem; font-size: 0.85rem; width: 100%; max-width: 280px; text-align: center; }
+            .highlight-banner-actions { flex-direction: column; width: 100%; gap: 12px; align-items: center; }
         }
 
         /* Event Cards */
@@ -418,4 +421,620 @@
             .section-header { margin-bottom: 2.5rem; }
             .section-header h2 { font-size: clamp(1.8rem, 6vw, 2.5rem); }
             .tab-btn { padding: 0.7rem 1.4rem !important; font-size: 0.85rem !important; }
+        }
+
+        /* ============================================================
+           AUDITIONS POPUP MODAL STYLES (Midnight Velvet Wine & Obsidian)
+           ============================================================ */
+
+        .audition-modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(12, 4, 9, 0.82);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            z-index: 1000003;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.4s;
+            padding: 20px;
+            cursor: none;
+            overscroll-behavior: contain;
+        }
+
+        .audition-modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+        }
+
+        .audition-modal-dialog {
+            position: relative;
+            width: 100%;
+            max-width: 920px;
+            max-height: 90vh;
+            background: linear-gradient(145deg, #190a14 0%, #11060d 60%, #0d040a 100%);
+            border: 1px solid rgba(225, 29, 72, 0.32);
+            border-radius: 32px;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.75), 0 0 50px rgba(112, 26, 59, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+            overflow-y: auto;
+            overflow-x: hidden;
+            -webkit-overflow-scrolling: touch;
+            overscroll-behavior: contain;
+            touch-action: pan-y;
+            transform: translateY(25px) scale(0.95);
+            transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
+            cursor: default;
+            scrollbar-width: thin;
+            scrollbar-color: rgba(225, 29, 72, 0.5) rgba(25, 10, 20, 0.6);
+        }
+
+        .audition-modal-overlay.active .audition-modal-dialog {
+            transform: translateY(0) scale(1);
+        }
+
+        /* Custom Elegant Scrollbar for Pop-up Modal */
+        .audition-modal-dialog::-webkit-scrollbar {
+            width: 6px;
+        }
+        .audition-modal-dialog::-webkit-scrollbar-track {
+            background: rgba(25, 10, 20, 0.6);
+            border-radius: 10px;
+            margin: 14px 0;
+        }
+        .audition-modal-dialog::-webkit-scrollbar-thumb {
+            background: rgba(225, 29, 72, 0.5);
+            border-radius: 10px;
+            transition: background 0.25s ease;
+        }
+        .audition-modal-dialog::-webkit-scrollbar-thumb:hover {
+            background: var(--accent-color);
+        }
+
+        /* Close Button */
+        .audition-close-btn {
+            position: absolute;
+            top: 18px;
+            right: 18px;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            cursor: none;
+        }
+
+        .audition-close-btn .close-icon-line {
+            position: absolute;
+            width: 16px;
+            height: 2px;
+            background: #fce7f3;
+            transition: all 0.3s ease;
+            border-radius: 2px;
+        }
+
+        .audition-close-btn .line-1 { transform: rotate(45deg); }
+        .audition-close-btn .line-2 { transform: rotate(-45deg); }
+
+        .audition-close-tooltip {
+            position: absolute;
+            top: 62px;
+            right: 14px;
+            background: var(--accent-color);
+            color: #ffffff;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            padding: 3px 8px;
+            border-radius: 6px;
+            opacity: 0;
+            transform: translateY(-5px);
+            transition: all 0.25s ease;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        @media (hover: hover) {
+            .audition-close-btn:hover {
+                background: var(--accent-color);
+                border-color: var(--accent-color);
+                transform: rotate(90deg) scale(1.05);
+                box-shadow: 0 0 20px rgba(225, 29, 72, 0.5);
+            }
+            .audition-close-btn:hover .close-icon-line {
+                background: #ffffff;
+            }
+            .audition-close-btn:hover + .audition-close-tooltip {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Ambient Glow Orbs */
+        .audition-glow-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(70px);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .orb-1 {
+            width: 240px;
+            height: 240px;
+            background: radial-gradient(circle, rgba(225, 29, 72, 0.32), transparent 70%);
+            top: -40px;
+            left: -40px;
+        }
+
+        .orb-2 {
+            width: 260px;
+            height: 260px;
+            background: radial-gradient(circle, rgba(168, 85, 247, 0.22), transparent 70%);
+            bottom: -50px;
+            right: -30px;
+        }
+
+        /* Modal Inner Grid */
+        .audition-modal-inner {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 1.5rem;
+            padding: 1.5rem 2rem 1.3rem 2rem;
+            align-items: center;
+        }
+
+        /* Poster Column */
+        .audition-poster-col {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .audition-poster-wrap {
+            position: relative;
+            width: 100%;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 14px 35px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(225, 29, 72, 0.25);
+            background: #000000;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        @media (hover: hover) {
+            .audition-poster-wrap:hover {
+                transform: translateY(-3px) scale(1.01);
+                box-shadow: 0 18px 45px rgba(225, 29, 72, 0.35), 0 0 0 1px rgba(225, 29, 72, 0.4);
+            }
+        }
+
+        .audition-poster-img {
+            width: 100%;
+            height: auto;
+            max-height: none;
+            object-fit: contain;
+            display: block;
+        }
+
+        /* Content Column */
+        .audition-content-col {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+
+        .audition-top-meta {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 0.45rem;
+        }
+
+        .audition-live-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(225, 29, 72, 0.18);
+            border: 1px solid rgba(225, 29, 72, 0.4);
+            color: #fda4af;
+            padding: 3px 10px;
+            border-radius: 50px;
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+        }
+
+        .pill-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--accent-color);
+            box-shadow: 0 0 6px var(--accent-color);
+            animation: beaconPulse 1.5s infinite;
+        }
+
+        .audition-council-tag {
+            font-size: 0.68rem;
+            color: rgba(252, 231, 243, 0.6);
+            letter-spacing: 0.8px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .audition-headline {
+            font-family: 'Cinzel Decorative', 'Playfair Display', serif;
+            font-size: clamp(1.4rem, 2.3vw, 1.85rem);
+            color: #ffffff;
+            line-height: 1.22;
+            margin-bottom: 0.35rem;
+            font-variant-ligatures: none;
+        }
+
+        .audition-headline .gradient-text {
+            background: linear-gradient(135deg, #ff4d6d, #f43f5e, #fb7185);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 25px rgba(225, 29, 72, 0.3);
+        }
+
+        .audition-intro {
+            font-size: 0.85rem;
+            color: rgba(252, 231, 243, 0.85);
+            line-height: 1.5;
+            margin-bottom: 0.65rem;
+        }
+
+        .audition-intro strong {
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        /* Event Details Grid */
+        .audition-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.45rem;
+            margin-bottom: 0.65rem;
+        }
+
+        .audition-grid-card {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(225, 29, 72, 0.2);
+            border-radius: 12px;
+            padding: 6px 11px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .audition-grid-card.audition-grid-full {
+            grid-column: span 2;
+        }
+
+        @media (hover: hover) {
+            .audition-grid-card:hover {
+                background: rgba(225, 29, 72, 0.12);
+                border-color: rgba(225, 29, 72, 0.4);
+                transform: translateY(-2px);
+            }
+        }
+
+        .grid-icon {
+            font-size: 1.15rem;
+            line-height: 1;
+            flex-shrink: 0;
+        }
+
+        .grid-meta {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .grid-label {
+            font-size: 0.62rem;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: #fda4af;
+            font-weight: 700;
+        }
+
+        .grid-value {
+            font-size: 0.79rem;
+            color: #ffffff;
+            font-weight: 600;
+            line-height: 1.35;
+        }
+
+        /* Departments Container */
+        .audition-depts-container {
+            margin-bottom: 0.75rem;
+        }
+
+        .depts-title {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            color: #fda4af;
+            font-weight: 700;
+            margin-bottom: 0.35rem;
+        }
+
+        .dept-pills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        .dept-tag-pill {
+            background: rgba(225, 29, 72, 0.15);
+            border: 1px solid rgba(225, 29, 72, 0.3);
+            color: #fce7f3;
+            font-size: 0.72rem;
+            font-weight: 500;
+            padding: 3px 8px;
+            border-radius: 20px;
+            transition: all 0.25s ease;
+            user-select: none;
+        }
+
+        @media (hover: hover) {
+            .dept-tag-pill:hover {
+                background: var(--accent-color);
+                border-color: var(--accent-color);
+                color: #ffffff;
+                transform: translateY(-2px);
+                box-shadow: 0 4px 14px rgba(225, 29, 72, 0.35);
+            }
+        }
+
+        /* CTA Action Wrapper */
+        .audition-cta-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .audition-btn-primary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #e11d48, #be123c);
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.6px;
+            text-transform: uppercase;
+            text-decoration: none;
+            box-shadow: 0 8px 22px rgba(225, 29, 72, 0.45);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            cursor: none;
+        }
+
+        .audition-btn-primary .arrow-svg {
+            width: 16px;
+            height: 16px;
+            transition: transform 0.3s ease;
+        }
+
+        @media (hover: hover) {
+            .audition-btn-primary:hover {
+                background: linear-gradient(135deg, #f43f5e, #e11d48);
+                transform: translateY(-2px) scale(1.02);
+                box-shadow: 0 12px 28px rgba(225, 29, 72, 0.55);
+                color: #ffffff;
+            }
+            .audition-btn-primary:hover .arrow-svg {
+                transform: translateX(4px);
+            }
+        }
+
+        .audition-btn-primary:active {
+            transform: scale(0.98);
+        }
+
+        .audition-btn-secondary {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(252, 231, 243, 0.22);
+            color: rgba(252, 231, 243, 0.85);
+            padding: 10px 16px;
+            border-radius: 50px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            letter-spacing: 0.4px;
+            transition: all 0.3s ease;
+            cursor: none;
+        }
+
+        @media (hover: hover) {
+            .audition-btn-secondary:hover {
+                background: rgba(255, 255, 255, 0.14);
+                border-color: rgba(252, 231, 243, 0.5);
+                color: #ffffff;
+                transform: translateY(-2px);
+            }
+        }
+
+        .audition-footnote {
+            font-size: 0.7rem;
+            color: rgba(252, 231, 243, 0.6);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .footnote-glow {
+            color: #fbbf24;
+        }
+
+        /* Floating Reopen Pill (Black Obsidian style as requested) */
+        .audition-floating-pill {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: linear-gradient(135deg, #180913 0%, #0d040a 100%);
+            border: 1.5px solid rgba(225, 29, 72, 0.45);
+            color: #ffffff;
+            padding: 9px 16px;
+            border-radius: 50px;
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.55), 0 0 20px rgba(225, 29, 72, 0.25);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            z-index: 99999;
+            cursor: none;
+            opacity: 0;
+            transform: translateY(20px) scale(0.9);
+            pointer-events: none;
+            transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+        }
+
+        .audition-floating-pill.visible {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            pointer-events: auto;
+        }
+
+        .floating-beacon {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--accent-color);
+            box-shadow: 0 0 8px var(--accent-color);
+            animation: beaconPulse 1.6s infinite;
+        }
+
+        .floating-text {
+            color: #ffffff;
+            font-size: 0.82rem;
+            letter-spacing: 0.3px;
+            font-weight: 600;
+        }
+
+        .floating-action-tag {
+            background: var(--accent-color);
+            color: #ffffff;
+            padding: 3px 10px;
+            border-radius: 50px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        @media (hover: hover) {
+            .audition-floating-pill:hover {
+                transform: translateY(-3px) scale(1.03);
+                border-color: var(--accent-color);
+                box-shadow: 0 14px 35px rgba(225, 29, 72, 0.45);
+            }
+        }
+
+        /* Touch Fallbacks for Auditions Elements */
+        @media not all and (hover: hover) and (pointer: fine) {
+            .audition-modal-overlay {
+                cursor: auto !important;
+            }
+            .audition-close-btn,
+            .audition-btn-primary,
+            .audition-btn-secondary,
+            .audition-floating-pill,
+            .dept-tag-pill {
+                cursor: pointer !important;
+            }
+        }
+
+        /* Responsive Audition Modal */
+        @media (max-width: 860px) {
+            .audition-modal-inner {
+                grid-template-columns: 1fr;
+                gap: 1.4rem;
+                padding: 2rem 1.4rem 1.8rem 1.4rem;
+            }
+            .audition-poster-col {
+                max-width: 280px;
+                width: 100%;
+                margin: 0 auto;
+            }
+            .audition-poster-img {
+                width: 100%;
+                height: auto;
+                max-height: none;
+                object-fit: contain;
+            }
+            .audition-headline {
+                font-size: 1.6rem;
+            }
+            .audition-grid-card.audition-grid-full {
+                grid-column: span 1;
+            }
+        }
+
+        @media (max-width: 540px) {
+            .audition-modal-dialog {
+                border-radius: 24px;
+                width: 95%;
+                max-height: 92vh;
+            }
+            .audition-modal-inner {
+                padding: 1.6rem 1.1rem 1.4rem 1.1rem;
+            }
+            .audition-close-btn {
+                top: 12px;
+                right: 12px;
+                width: 36px;
+                height: 36px;
+            }
+            .audition-headline {
+                font-size: 1.4rem;
+            }
+            .audition-grid {
+                grid-template-columns: 1fr;
+                gap: 0.5rem;
+            }
+            .audition-grid-card.audition-grid-full {
+                grid-column: span 1;
+            }
+            .audition-cta-wrapper {
+                flex-direction: column;
+                width: 100%;
+            }
+            .audition-btn-primary,
+            .audition-btn-secondary {
+                width: 100%;
+                text-align: center;
+            }
+            .audition-floating-pill {
+                bottom: 16px;
+                right: 16px;
+                padding: 8px 14px;
+                font-size: 0.78rem;
+            }
         }

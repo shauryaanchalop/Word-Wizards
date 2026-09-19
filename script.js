@@ -236,7 +236,175 @@
             }
         });
 
+        // ==========================================
+        // AUDITIONS AUTOMATIC POPUP & REOPEN LOGIC
+        // ==========================================
+        const auditionModal = document.getElementById('auditionModal');
+        const closeAuditionModalBtn = document.getElementById('closeAuditionModal');
+        const auditionDismissBtn = document.getElementById('auditionDismissAction');
+        const auditionFloatingPill = document.getElementById('auditionFloatingPill');
+        const auditionsBannerImg = document.getElementById('auditionsBannerImg');
+
+        function openAuditionModal() {
+            if (!auditionModal) return;
+            const dialog = auditionModal.querySelector('.audition-modal-dialog');
+            if (dialog) dialog.scrollTop = 0;
+            auditionModal.classList.add('active');
+            if (auditionFloatingPill) auditionFloatingPill.classList.remove('visible');
+            if (typeof lenis !== 'undefined' && lenis) lenis.stop();
+
+            if (typeof gsap !== 'undefined') {
+                gsap.fromTo('.audition-modal-dialog', 
+                    { scale: 0.9, opacity: 0, y: 25 },
+                    { scale: 1, opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }
+                );
+            }
+        }
+
+        function closeAuditionModal() {
+            if (!auditionModal) return;
+            
+            if (typeof gsap !== 'undefined') {
+                gsap.to('.audition-modal-dialog', {
+                    scale: 0.94,
+                    opacity: 0,
+                    y: 15,
+                    duration: 0.25,
+                    ease: "power2.in",
+                    onComplete: () => {
+                        auditionModal.classList.remove('active');
+                        if (typeof lenis !== 'undefined' && lenis) lenis.start();
+                        if (auditionFloatingPill) auditionFloatingPill.classList.add('visible');
+                        gsap.set('.audition-modal-dialog', { clearProps: 'all' });
+                    }
+                });
+            } else {
+                auditionModal.classList.remove('active');
+                if (typeof lenis !== 'undefined' && lenis) lenis.start();
+                if (auditionFloatingPill) auditionFloatingPill.classList.add('visible');
+            }
+        }
+
+        window.openAuditionModal = openAuditionModal;
+        window.closeAuditionModal = closeAuditionModal;
+
+        // Automatic pop-up trigger after preloader finishes
+        function scheduleAutomaticAuditionPopup() {
+            setTimeout(() => {
+                openAuditionModal();
+            }, 2700);
+        }
+
+        if (document.readyState === 'complete') {
+            scheduleAutomaticAuditionPopup();
+        } else {
+            window.addEventListener('load', scheduleAutomaticAuditionPopup);
+        }
+
+        // Event Listeners for closing
+        if (closeAuditionModalBtn) {
+            closeAuditionModalBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                closeAuditionModal();
+            });
+        }
+        if (auditionDismissBtn) {
+            auditionDismissBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                closeAuditionModal();
+            });
+        }
+        if (auditionModal) {
+            auditionModal.addEventListener('click', (e) => {
+                if (e.target === auditionModal) {
+                    closeAuditionModal();
+                }
+            });
+        }
+
+        // Reopen via Floating Pill
+        if (auditionFloatingPill) {
+            auditionFloatingPill.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                openAuditionModal();
+            });
+        }
+
+        // Also allow clicking on banner image or details button to open modal
+        if (auditionsBannerImg) {
+            auditionsBannerImg.style.cursor = 'pointer';
+            auditionsBannerImg.addEventListener('click', () => {
+                openAuditionModal();
+            });
+        }
+        const openAuditionDetailsBannerBtn = document.getElementById('openAuditionDetailsBannerBtn');
+        if (openAuditionDetailsBannerBtn) {
+            openAuditionDetailsBannerBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                openAuditionModal();
+            });
+        }
+
+        // Mouse scroll & touch fix for Audition Modal (Lenis bypass)
+        const auditionDialog = auditionModal ? auditionModal.querySelector('.audition-modal-dialog') : null;
+        if (auditionModal && auditionDialog) {
+            // Prevent wheel event from reaching window where Lenis intercepts & cancels it
+            auditionModal.addEventListener('wheel', (e) => {
+                e.stopPropagation();
+                auditionDialog.scrollTop += e.deltaY;
+            }, { passive: false });
+
+            auditionDialog.addEventListener('wheel', (e) => {
+                e.stopPropagation();
+                auditionDialog.scrollTop += e.deltaY;
+            }, { passive: false });
+
+            // Ensure touch devices can scroll the modal freely
+            auditionModal.addEventListener('touchmove', (e) => {
+                e.stopPropagation();
+            }, { passive: true });
+        }
+
+        // Global ESC key listener for all modals and arrow key navigation for modal
+        window.addEventListener('keydown', (e) => {
+            if (auditionModal && auditionModal.classList.contains('active')) {
+                if (e.key === 'ArrowDown' && auditionDialog) {
+                    auditionDialog.scrollTop += 60;
+                } else if (e.key === 'ArrowUp' && auditionDialog) {
+                    auditionDialog.scrollTop -= 60;
+                } else if (e.key === 'PageDown' && auditionDialog) {
+                    auditionDialog.scrollTop += 250;
+                } else if (e.key === 'PageUp' && auditionDialog) {
+                    auditionDialog.scrollTop -= 250;
+                }
+            }
+
+            if (e.key === 'Escape' || e.key === 'Esc' || e.keyCode === 27) {
+                if (auditionModal && auditionModal.classList.contains('active')) {
+                    closeAuditionModal();
+                }
+                if (modalOverlay && modalOverlay.classList.contains('active')) {
+                    modalOverlay.classList.remove('active');
+                    if (typeof lenis !== 'undefined' && lenis) lenis.start();
+                }
+                if (lightbox && lightbox.classList.contains('active')) {
+                    lightbox.classList.remove('active');
+                    if (typeof lenis !== 'undefined' && lenis) lenis.start();
+                }
+            }
+        });
+
+        // Bind custom cursor hover states to newly added interactive elements
+        document.querySelectorAll('.audition-modal-dialog a, .audition-modal-dialog button, .audition-floating-pill, .dept-tag-pill').forEach(el => {
+            el.addEventListener('mouseenter', () => document.body.classList.add('hovering'));
+            el.addEventListener('mouseleave', () => document.body.classList.remove('hovering'));
+        });
+
 // Performance suggestions:
 // 1. Disable custom cursor on low-end devices.
 // 2. Reduce GSAP animations.
 // 3. Pause marquee animations when off-screen.
+
