@@ -26,7 +26,7 @@ Word Wizards is the official First-Year Student Development Society of **Akhiles
 
 This website serves as the society's digital headquarters, featuring:
 
-* **Audition Results & Selected Members Portal** (187 Members with Search, Branch & Section Filters, and Sorting)
+* **Audition Results & Selected Members Portal** (188 Members with Search, Branch & Section Filters, and Sorting)
 * **Catch-Up Auditions Showcase** (Highlighted Coming Soon Banner & Vintage Poster)
 * **Council Generations** (Interactive Council 3.0, Council 2.0, and Council 1.0 Portfolios)
 * **Society Vision & Departments**
@@ -48,7 +48,7 @@ Visit the official website:
 ## 🚀 Key Features
 
 ### 🎓 Selected Members & Audition Results Portal
-* **187 Selected Members**: Complete official roster of inducted students with Branch and Section badges.
+* **188 Selected Members**: Complete official roster of inducted students with Branch and Section badges.
 * **Instant Name-Only Search**: Clean, real-time search field filtered strictly by student name.
 * **Branch Filter Dropdown**: Filter students across all engineering branches (AIDS, AIML, CS, CSE, CST, ECE, IT, ME).
 * **Section Filter Dropdown**: Filter across sections (Section A through W, Section G&H).

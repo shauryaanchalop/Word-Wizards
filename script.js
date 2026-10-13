@@ -441,6 +441,7 @@
             { name: "Iqra Khan", branch: "CSE", section: "B" },
             { name: "Isha Chhikara", branch: "IT", section: "F" },
             { name: "Janvi", branch: "AIML", section: "I" },
+            { name: "Jatin", branch: "AIDS", section: "L" },
             { name: "Jatin Jaiswal", branch: "IT", section: "E" },
             { name: "Jitika Bansal", branch: "AIDS", section: "N" },
             { name: "Kajal Verma", branch: "AIML", section: "J" },
