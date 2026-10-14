@@ -378,7 +378,7 @@
             { name: "Aditya Yadav", branch: "AIML", section: "I", departments: ["Technical"] },
             { name: "Adrika Bhadauria", branch: "CSE", section: "B", departments: ["Technical","Anchoring"] },
             { name: "Afshara", branch: "CSE", section: "B", departments: ["Technical"] },
-            { name: "Akash Singh", branch: "CS", section: "W", departments: ["Technical"] },
+            { name: "Akash Singh", branch: "CS", section: "W", departments: ["Technical", "Video Editing"] },
             { name: "Akshat Aggarwal", branch: "CSE", section: "A", departments: ["Technical"] },
             { name: "Akshay", branch: "CST", section: "O", departments: ["Technical","Content"] },
             { name: "Akshit Mishra", branch: "AIML", section: "T", departments: ["Technical","PR & Sponsorship","Content"] },
