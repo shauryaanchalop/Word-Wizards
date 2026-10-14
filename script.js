@@ -427,7 +427,7 @@
             { name: "Farhan", branch: "AIDS", section: "M", departments: ["Technical","Graphics","PR & Sponsorship"] },
             { name: "Farhan Ahmed", branch: "AIML", section: "J", departments: ["Technical"] },
             { name: "Garv Chawla", branch: "AIDS", section: "N", departments: ["Technical","Event","Creative"] },
-            { name: "Ginishka Arora", branch: "AIDS", section: "M", departments: ["Video Editing"] },
+            { name: "Ginishka Arora", branch: "AIDS", section: "M", departments: ["Technical", "Video Editing"] },
             { name: "Gouri Saroch", branch: "CSE", section: "C", departments: ["Technical"] },
             { name: "Gyan Prakash", branch: "CSE", section: "Q", departments: ["Technical","Event"] },
             { name: "Hardik Raj", branch: "AIML", section: "T", departments: ["Creative"] },
