@@ -928,7 +928,7 @@
             <div class="section-header reveal">
                 <span class="selection-kicker">WORD WIZARDS AUDITIONS 2026</span>
                 <h2>Selected Members</h2>
-                <p class="section-text">Heartiest congratulations to the talented students selected as official <strong>Members of Word Wizards</strong> through the auditions! Search your name below to see if you are selected.</p>
+                <p class="section-text">Heartiest congratulations to the talented students selected as official <strong>Members of Word Wizards</strong> through the auditions! Search your name or filter by department, branch, and section below.</p>
             </div>
 
             <!-- Controls: Search Bar & Count Badge -->
@@ -938,11 +938,11 @@
                         <circle cx="11" cy="11" r="8"></circle>
                         <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                     </svg>
-                    <input type="text" id="recruitSearchInput" placeholder="Search by student name..." autocomplete="off">
+                    <input type="text" id="recruitSearchInput" placeholder="Search by student name or department..." autocomplete="off">
                     <button type="button" id="clearSearchBtn" class="clear-search-btn" aria-label="Clear Search" style="display:none;">&times;</button>
                 </div>
 
-                <!-- Dropdown Menus: Search by Branch, Search by Section, Sort by Branch/Section -->
+                <!-- Dropdown Menus: Search by Branch, Search by Section, Search by Department, Sort -->
                 <div class="selection-dropdowns-bar" id="selectionDropdownsBar">
                     <div class="dropdown-field">
                         <label for="branchFilterSelect" class="dropdown-label">Branch</label>
@@ -999,13 +999,38 @@
                     </div>
 
                     <div class="dropdown-field">
+                        <label for="deptFilterSelect" class="dropdown-label">Department</label>
+                        <div class="select-container">
+                            <select id="deptFilterSelect" class="selection-select premium-hover" aria-label="Search by Department">
+                                <option value="all">All Departments</option>
+                                <option value="Technical">Technical</option>
+                                <option value="Anchoring">Anchoring</option>
+                                <option value="Creative">Creative</option>
+                                <option value="Content">Content</option>
+                                <option value="Event">Event</option>
+                                <option value="PR & Sponsorship">PR & Sponsorship</option>
+                                <option value="Social Media">Social Media</option>
+                                <option value="Video Editing">Video Editing</option>
+                                <option value="Graphics">Graphics</option>
+                            </select>
+                            <svg class="select-arrow-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="dropdown-field">
                         <label for="recruitSortSelect" class="dropdown-label">Sort</label>
                         <div class="select-container">
-                            <select id="recruitSortSelect" class="selection-select premium-hover" aria-label="Sort by Branch or Section">
+                            <select id="recruitSortSelect" class="selection-select premium-hover" aria-label="Sort by Branch, Section, or Department">
                                 <option value="branch-asc">Branch (A &rarr; Z)</option>
                                 <option value="branch-desc">Branch (Z &rarr; A)</option>
                                 <option value="section-asc">Section (A &rarr; Z)</option>
                                 <option value="section-desc">Section (Z &rarr; A)</option>
+                                <option value="dept-asc">Department (A &rarr; Z)</option>
+                                <option value="dept-desc">Department (Z &rarr; A)</option>
+                                <option value="name-asc">Name (A &rarr; Z)</option>
+                                <option value="name-desc">Name (Z &rarr; A)</option>
                             </select>
                             <svg class="select-arrow-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polyline points="6 9 12 15 18 9"></polyline>

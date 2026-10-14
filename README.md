@@ -26,7 +26,7 @@ Word Wizards is the official First-Year Student Development Society of **Akhiles
 
 This website serves as the society's digital headquarters, featuring:
 
-* **Audition Results & Selected Members Portal** (188 Members with Search, Branch & Section Filters, and Sorting)
+* **Audition Results & Selected Members Portal** (188 Members with Search, Department, Branch & Section Filters, and Sorting)
 * **Catch-Up Auditions Showcase** (Highlighted Coming Soon Banner & Vintage Poster)
 * **Council Generations** (Interactive Council 3.0, Council 2.0, and Council 1.0 Portfolios)
 * **Society Vision & Departments**
@@ -48,12 +48,14 @@ Visit the official website:
 ## 🚀 Key Features
 
 ### 🎓 Selected Members & Audition Results Portal
-* **188 Selected Members**: Complete official roster of inducted students with Branch and Section badges.
-* **Instant Name-Only Search**: Clean, real-time search field filtered strictly by student name.
+* **188 Selected Members**: Complete official roster of inducted students with Branch, Section, and Department badges.
+* **9 Society Departments**: Direct mappings for Technical, Anchoring, Creative, Content, Event, PR & Sponsorship, Social Media, Video Editing, and Graphics, supporting students in multiple departments.
+* **Instant Smart Search**: Clean, real-time search field allowing queries by student name or department keyword.
+* **Department Filter Dropdown**: Filter students specifically across any of the 9 society departments.
 * **Branch Filter Dropdown**: Filter students across all engineering branches (AIDS, AIML, CS, CSE, CST, ECE, IT, ME).
 * **Section Filter Dropdown**: Filter across sections (Section A through W, Section G&H).
-* **Dual-Mode Sorting**: Sort results by Branch (A → Z / Z → A) and Section (A → Z / Z → A).
-* **One-Click Reset**: Instant reset button returning filters and search to default state.
+* **Multi-Attribute Sorting**: Sort results by Branch, Section, Department (A → Z / Z → A), or Name.
+* **One-Click Reset**: Instant reset button returning filters, sort, and search to default state.
 * **Dynamic Count & Empty State**: Live counter badge reflecting filtered count, with contextual search assistance when no match is found.
 * **Audition Results Live Popup**: Modal alert welcoming freshers and directing them directly to the results directory.
 

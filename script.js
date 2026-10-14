@@ -367,194 +367,194 @@
         // Official list of selected members of Word Wizards from Auditions
         // Details: name, branch, and section (no department system)
         const selectedStudentsList = [
-            { name: "Aarush Jain", branch: "CSE", section: "A" },
-            { name: "Aashu Kumari", branch: "IT", section: "E" },
-            { name: "Aastha Pandey", branch: "IT", section: "F" },
-            { name: "Aavika Bhatt", branch: "CSE", section: "Q" },
-            { name: "Abdulla Siddiqui", branch: "CSE", section: "Q" },
-            { name: "Abhijeet Kumar Rai", branch: "CST", section: "O" },
-            { name: "Abhinav Kumar Jha", branch: "CST", section: "O" },
-            { name: "Addhyan Kumar", branch: "CS", section: "W" },
-            { name: "Aditya Yadav", branch: "AIML", section: "I" },
-            { name: "Adrika Bhadauria", branch: "CSE", section: "B" },
-            { name: "Afshara", branch: "CSE", section: "B" },
-            { name: "Akash Singh", branch: "CS", section: "W" },
-            { name: "Akshat Aggarwal", branch: "CSE", section: "A" },
-            { name: "Akshay", branch: "CST", section: "O" },
-            { name: "Akshit Mishra", branch: "AIML", section: "T" },
-            { name: "Akshita Purohit", branch: "AIML", section: "T" },
-            { name: "Aman Kumar Singh", branch: "CSE", section: "A" },
-            { name: "Amay Jain", branch: "ECE", section: "R" },
-            { name: "Ambika Jha", branch: "AIDS", section: "M" },
-            { name: "Amitanshu Srivastava", branch: "CS", section: "W" },
-            { name: "Amlesh Mishra", branch: "AIDS", section: "M" },
-            { name: "Anjali Yadav", branch: "IT", section: "F" },
-            { name: "Ankit Kumar", branch: "AIML", section: "J" },
-            { name: "Ankit Kumar Prajapati", branch: "IT", section: "F" },
-            { name: "Anmol Gupta", branch: "AIDS", section: "M" },
-            { name: "Anshika Kumari", branch: "CSE", section: "C" },
-            { name: "Anshul Bhardwaj", branch: "AIML", section: "J" },
-            { name: "Arihant Rehal", branch: "AIDS", section: "M" },
-            { name: "Arnav Aggarwal", branch: "CST", section: "V" },
-            { name: "Arnav Nagpal", branch: "AIML", section: "I" },
-            { name: "Arnav Shrivastav", branch: "AIML", section: "J" },
-            { name: "Aryan Chanana", branch: "AIDS", section: "L" },
-            { name: "Ashish Kumar Dwivedi", branch: "CSE", section: "C" },
-            { name: "Atharv Gupta", branch: "AIDS", section: "U" },
-            { name: "Avni", branch: "AIDS", section: "U" },
-            { name: "Ayaan Asif", branch: "CST", section: "O" },
-            { name: "Ayna Pathak", branch: "AIDS", section: "N" },
-            { name: "Ayush", branch: "IT", section: "E" },
-            { name: "Ayush Jha", branch: "AIDS", section: "M" },
-            { name: "Ayush Kaushik", branch: "AIML", section: "K" },
-            { name: "Bhavik Bhasin", branch: "IT", section: "E" },
-            { name: "Bhavya Jain", branch: "AIML", section: "I" },
-            { name: "Bhavya Jain", branch: "ME", section: "G&H" },
-            { name: "Bhumika Kandpal", branch: "AIDS", section: "N" },
-            { name: "Chetanya Verma", branch: "AIML", section: "T" },
-            { name: "Daksh Jain", branch: "CST", section: "O" },
-            { name: "Daksh Kaushik", branch: "AIML", section: "T" },
-            { name: "Deepak Maurya", branch: "CS", section: "W" },
-            { name: "Dev", branch: "AIDS", section: "M" },
-            { name: "Dev Bhardwaj", branch: "CSE", section: "C" },
-            { name: "Devansh Jha", branch: "ECE", section: "R" },
-            { name: "Devika Yadav", branch: "AIDS", section: "N" },
-            { name: "Dhriti Samanotra", branch: "CS", section: "W" },
-            { name: "Dishant Verma", branch: "AIDS", section: "L" },
-            { name: "Divyanshi", branch: "CS", section: "P" },
-            { name: "Divyanshi Malik", branch: "IT", section: "F" },
-            { name: "Divyanshu Tiwari", branch: "AIML", section: "I" },
-            { name: "Farhan", branch: "AIDS", section: "M" },
-            { name: "Farhan Ahmed", branch: "AIML", section: "J" },
-            { name: "Garv Chawla", branch: "AIDS", section: "N" },
-            { name: "Ginishka Arora", branch: "AIDS", section: "M" },
-            { name: "Gouri Saroch", branch: "CSE", section: "C" },
-            { name: "Gyan Prakash", branch: "CSE", section: "Q" },
-            { name: "Hardik Raj", branch: "AIML", section: "T" },
-            { name: "Harsh Chaudhary", branch: "CS", section: "W" },
-            { name: "Harsh Mathpal", branch: "CSE", section: "Q" },
-            { name: "Harsh Pratap Singh", branch: "CS", section: "P" },
-            { name: "Harsh Raj", branch: "CSE", section: "A" },
-            { name: "Harsh Sharma", branch: "CST", section: "O" },
-            { name: "Harshit Jaiswal", branch: "IT", section: "E" },
-            { name: "Hena Monga", branch: "AIML", section: "J" },
-            { name: "Iqra Khan", branch: "CSE", section: "B" },
-            { name: "Isha Chhikara", branch: "IT", section: "F" },
-            { name: "Janvi", branch: "AIML", section: "I" },
-            { name: "Jatin", branch: "AIDS", section: "L" },
-            { name: "Jatin Jaiswal", branch: "IT", section: "E" },
-            { name: "Jitika Bansal", branch: "AIDS", section: "N" },
-            { name: "Kajal Verma", branch: "AIML", section: "J" },
-            { name: "Kartikeya Sharma", branch: "CST", section: "V" },
-            { name: "Kashvi Sharma", branch: "IT", section: "E" },
-            { name: "Kashvi Verma", branch: "ECE", section: "D" },
-            { name: "Kaveri", branch: "IT", section: "E" },
-            { name: "Kavya Gujral", branch: "AIDS", section: "M" },
-            { name: "Ketki", branch: "CSE", section: "A" },
-            { name: "Khushal Jain", branch: "AIDS", section: "L" },
-            { name: "Khushi Gupta", branch: "IT", section: "F" },
-            { name: "Khushi Kumari", branch: "AIML", section: "J" },
-            { name: "Khushi Sharma", branch: "CSE", section: "C" },
-            { name: "Kinjal Gupta", branch: "AIDS", section: "L" },
-            { name: "Krishna Saxena", branch: "IT", section: "E" },
-            { name: "Krishna Sinha", branch: "CST", section: "V" },
-            { name: "Kritarth Shukla", branch: "AIML", section: "I" },
-            { name: "Kriti Jain", branch: "AIDS", section: "M" },
-            { name: "Lakshay Murthy", branch: "IT", section: "S" },
-            { name: "Lakshit", branch: "CS", section: "P" },
-            { name: "Lavanye Garg", branch: "AIML", section: "K" },
-            { name: "Madhav Gupta", branch: "IT", section: "E" },
-            { name: "Madhav Kabra", branch: "AIDS", section: "U" },
-            { name: "Manan Masiwal", branch: "AIML", section: "T" },
-            { name: "Mansi Tiwari", branch: "CSE", section: "B" },
-            { name: "Mayank Sharma", branch: "AIML", section: "J" },
-            { name: "Mayank Yadav", branch: "CS", section: "W" },
-            { name: "MD Anwar", branch: "CSE", section: "A" },
-            { name: "Meenakshi Saun", branch: "IT", section: "F" },
-            { name: "Mohd Asad Ahmad", branch: "AIML", section: "J" },
-            { name: "Mohd. Kaif", branch: "AIML", section: "K" },
-            { name: "Mohit Chhabra", branch: "AIML", section: "T" },
-            { name: "Mourya Aditya", branch: "CSE", section: "A" },
-            { name: "Naitik Malhotra", branch: "CST", section: "V" },
-            { name: "Naman Agarwal", branch: "IT", section: "E" },
-            { name: "Naman Jain", branch: "ECE", section: "R" },
-            { name: "Naman Kr. Singh", branch: "AIML", section: "T" },
-            { name: "Namit Bisht", branch: "CSE", section: "A" },
-            { name: "Nikunj Malik", branch: "AIML", section: "I" },
-            { name: "Nirbhay", branch: "CSE", section: "Q" },
-            { name: "Nisha Kumari", branch: "CSE", section: "A" },
-            { name: "Nitin Kumar", branch: "CSE", section: "B" },
-            { name: "Niya Sharma", branch: "CS", section: "P" },
-            { name: "Niyati Rawat", branch: "IT", section: "E" },
-            { name: "Ojassv Manchanda", branch: "AIDS", section: "M" },
-            { name: "Palak Sharma", branch: "IT", section: "F" },
-            { name: "Piyush", branch: "AIML", section: "J" },
-            { name: "Prachi", branch: "CST", section: "V" },
-            { name: "Prajna Sharma", branch: "AIDS", section: "M" },
-            { name: "Pranav Aggarwal", branch: "AIML", section: "I" },
-            { name: "Prateek", branch: "CSE", section: "C" },
-            { name: "Pratyush Shandilya", branch: "IT", section: "S" },
-            { name: "Prince Malay", branch: "CSE", section: "B" },
-            { name: "Prince Soni", branch: "AIDS", section: "U" },
-            { name: "Priyanshi Khanna", branch: "IT", section: "E" },
-            { name: "Rabiya Parveen", branch: "CS", section: "P" },
-            { name: "Rahul Sahani", branch: "CS", section: "W" },
-            { name: "Rajat", branch: "CSE", section: "A" },
-            { name: "Raksha Anand", branch: "CSE", section: "C" },
-            { name: "Rashi", branch: "CSE", section: "Q" },
-            { name: "Ravi Joshi", branch: "IT", section: "F" },
-            { name: "Riddhi Arora", branch: "CS", section: "W" },
-            { name: "Ronit", branch: "CS", section: "W" },
-            { name: "Rudraksh Gupta", branch: "CST", section: "O" },
-            { name: "Rudrakshi", branch: "CSE", section: "C" },
-            { name: "Sachin Gupta", branch: "CST", section: "V" },
-            { name: "Sakshi", branch: "CST", section: "V" },
-            { name: "Sanchit Binwal", branch: "CS", section: "W" },
-            { name: "Sarthak Jain", branch: "CS", section: "W" },
-            { name: "Saumay Dwivedi", branch: "CSE", section: "A" },
-            { name: "Saurav Mishra", branch: "ECE", section: "D" },
-            { name: "Shaibal Chakraborty", branch: "CSE", section: "Q" },
-            { name: "Shaz Ahmed", branch: "CSE", section: "B" },
-            { name: "Shiva Jaiswal", branch: "CSE", section: "A" },
-            { name: "Shivam", branch: "CSE", section: "C" },
-            { name: "Shivam Pal", branch: "CST", section: "O" },
-            { name: "Shivam Panwar", branch: "CSE", section: "A" },
-            { name: "Shlok", branch: "AIDS", section: "U" },
-            { name: "Shreeyash Khandelwal", branch: "CS", section: "P" },
-            { name: "Shresth", branch: "IT", section: "E" },
-            { name: "Shresth Malik", branch: "AIML", section: "T" },
-            { name: "Shreya Aggarwal", branch: "AIML", section: "I" },
-            { name: "Shreya Gupta", branch: "CSE", section: "A" },
-            { name: "Shreya Singh", branch: "AIML", section: "J" },
-            { name: "Shruti Maharaj", branch: "AIML", section: "T" },
-            { name: "Shubh Singhal", branch: "CS", section: "W" },
-            { name: "Shubhmay Pradhan", branch: "CSE", section: "C" },
-            { name: "Siddharth Singh", branch: "AIDS", section: "L" },
-            { name: "Siddhi Dhawan", branch: "CSE", section: "A" },
-            { name: "Snigdha Khanna", branch: "ECE", section: "D" },
-            { name: "Soumya Yadav", branch: "AIML", section: "T" },
-            { name: "Subham Prakash Mishra", branch: "CST", section: "O" },
-            { name: "Suhani Chaudhary", branch: "ME", section: "G&H" },
-            { name: "Surya Chauhan", branch: "AIML", section: "I" },
-            { name: "Syed Altamash", branch: "AIML", section: "T" },
-            { name: "Tanishqa Rani", branch: "CS", section: "P" },
-            { name: "Taniya Garg", branch: "AIDS", section: "N" },
-            { name: "Tanmay Parida", branch: "CS", section: "W" },
-            { name: "Tripti Thakur", branch: "CS", section: "W" },
-            { name: "Udit bansal", branch: "CS", section: "W" },
-            { name: "Ujjwal Sharma", branch: "AIDS", section: "U" },
-            { name: "Ujjwal Singh", branch: "AIML", section: "K" },
-            { name: "Vaman Jangra", branch: "AIDS", section: "L" },
-            { name: "Vansh Gairola", branch: "CST", section: "V" },
-            { name: "Vansh Gupta", branch: "ECE", section: "R" },
-            { name: "Vansh Tyagi", branch: "AIML", section: "J" },
-            { name: "Vanshika Gupta", branch: "AIDS", section: "M" },
-            { name: "Veedushi Bhatt", branch: "AIML", section: "T" },
-            { name: "Vinita Katara", branch: "CSE", section: "Q" },
-            { name: "Vyom Saxena", branch: "AIDS", section: "U" },
-            { name: "Yash", branch: "CST", section: "O" },
-            { name: "Yuvraj", branch: "CSE", section: "C" },
-            { name: "Zainuddin", branch: "CSE", section: "B" }
+            { name: "Aarush Jain", branch: "CSE", section: "A", departments: ["Technical"] },
+            { name: "Aashu Kumari", branch: "IT", section: "E", departments: ["Creative"] },
+            { name: "Aastha Pandey", branch: "IT", section: "F", departments: ["Anchoring"] },
+            { name: "Aavika Bhatt", branch: "CSE", section: "Q", departments: ["Content"] },
+            { name: "Abdulla Siddiqui", branch: "CSE", section: "Q", departments: ["Content"] },
+            { name: "Abhijeet Kumar Rai", branch: "CST", section: "O", departments: ["Technical"] },
+            { name: "Abhinav Kumar Jha", branch: "CST", section: "O", departments: ["Event","Content"] },
+            { name: "Addhyan Kumar", branch: "CS", section: "W", departments: ["Technical","Creative","Content","Graphics"] },
+            { name: "Aditya Yadav", branch: "AIML", section: "I", departments: ["Technical"] },
+            { name: "Adrika Bhadauria", branch: "CSE", section: "B", departments: ["Technical","Anchoring"] },
+            { name: "Afshara", branch: "CSE", section: "B", departments: ["Technical"] },
+            { name: "Akash Singh", branch: "CS", section: "W", departments: ["Technical"] },
+            { name: "Akshat Aggarwal", branch: "CSE", section: "A", departments: ["Technical"] },
+            { name: "Akshay", branch: "CST", section: "O", departments: ["Technical","Content"] },
+            { name: "Akshit Mishra", branch: "AIML", section: "T", departments: ["Technical","PR & Sponsorship","Content"] },
+            { name: "Akshita Purohit", branch: "AIML", section: "T", departments: ["Anchoring","Social Media","Video Editing"] },
+            { name: "Aman Kumar Singh", branch: "CSE", section: "A", departments: ["Event"] },
+            { name: "Amay Jain", branch: "ECE", section: "R", departments: ["Technical"] },
+            { name: "Ambika Jha", branch: "AIDS", section: "M", departments: ["Technical","Anchoring","Video Editing"] },
+            { name: "Amitanshu Srivastava", branch: "CS", section: "W", departments: ["Technical","Graphics","Content"] },
+            { name: "Amlesh Mishra", branch: "AIDS", section: "M", departments: ["Technical","Content","Graphics"] },
+            { name: "Anjali Yadav", branch: "IT", section: "F", departments: ["Social Media"] },
+            { name: "Ankit Kumar", branch: "AIML", section: "J", departments: ["Technical","Event"] },
+            { name: "Ankit Kumar Prajapati", branch: "IT", section: "F", departments: ["Technical"] },
+            { name: "Anmol Gupta", branch: "AIDS", section: "M", departments: ["Technical","Anchoring"] },
+            { name: "Anshika Kumari", branch: "CSE", section: "C", departments: ["Technical","Anchoring"] },
+            { name: "Anshul Bhardwaj", branch: "AIML", section: "J", departments: ["Creative"] },
+            { name: "Arihant Rehal", branch: "AIDS", section: "M", departments: ["Technical","Content"] },
+            { name: "Arnav Aggarwal", branch: "CST", section: "V", departments: ["PR & Sponsorship"] },
+            { name: "Arnav Nagpal", branch: "AIML", section: "I", departments: ["Technical"] },
+            { name: "Arnav Shrivastav", branch: "AIML", section: "J", departments: ["Technical","Graphics"] },
+            { name: "Aryan Chanana", branch: "AIDS", section: "L", departments: ["Technical"] },
+            { name: "Ashish Kumar Dwivedi", branch: "CSE", section: "C", departments: ["Technical","Content"] },
+            { name: "Atharv Gupta", branch: "AIDS", section: "U", departments: ["Creative"] },
+            { name: "Avni", branch: "AIDS", section: "U", departments: ["Graphics","Creative"] },
+            { name: "Ayaan Asif", branch: "CST", section: "O", departments: ["Technical","Anchoring"] },
+            { name: "Ayna Pathak", branch: "AIDS", section: "N", departments: ["Event","PR & Sponsorship"] },
+            { name: "Ayush", branch: "IT", section: "E", departments: ["Video Editing"] },
+            { name: "Ayush Jha", branch: "AIDS", section: "M", departments: ["PR & Sponsorship"] },
+            { name: "Ayush Kaushik", branch: "AIML", section: "K", departments: ["Creative"] },
+            { name: "Bhavik Bhasin", branch: "IT", section: "E", departments: ["Event","PR & Sponsorship"] },
+            { name: "Bhavya Jain", branch: "AIML", section: "I", departments: ["Technical","Content"] },
+            { name: "Bhavya Jain", branch: "ME", section: "G&H", departments: ["Graphics"] },
+            { name: "Bhumika Kandpal", branch: "AIDS", section: "N", departments: ["Technical","PR & Sponsorship","Creative"] },
+            { name: "Chetanya Verma", branch: "AIML", section: "T", departments: ["Technical","Social Media","Video Editing"] },
+            { name: "Daksh Jain", branch: "CST", section: "O", departments: ["Video Editing"] },
+            { name: "Daksh Kaushik", branch: "AIML", section: "T", departments: ["Technical"] },
+            { name: "Deepak Maurya", branch: "CS", section: "W", departments: ["Event","PR & Sponsorship"] },
+            { name: "Dev", branch: "AIDS", section: "M", departments: ["Social Media","Video Editing"] },
+            { name: "Dev Bhardwaj", branch: "CSE", section: "C", departments: ["Technical","Anchoring","PR & Sponsorship"] },
+            { name: "Devansh Jha", branch: "ECE", section: "R", departments: ["Technical","Event"] },
+            { name: "Devika Yadav", branch: "AIDS", section: "N", departments: ["Technical","Anchoring","Event"] },
+            { name: "Dhriti Samanotra", branch: "CS", section: "W", departments: ["Technical"] },
+            { name: "Dishant Verma", branch: "AIDS", section: "L", departments: ["Technical","Event"] },
+            { name: "Divyanshi", branch: "CS", section: "P", departments: ["Technical","Event"] },
+            { name: "Divyanshi Malik", branch: "IT", section: "F", departments: ["Event"] },
+            { name: "Divyanshu Tiwari", branch: "AIML", section: "I", departments: ["PR & Sponsorship"] },
+            { name: "Farhan", branch: "AIDS", section: "M", departments: ["Technical","Graphics","PR & Sponsorship"] },
+            { name: "Farhan Ahmed", branch: "AIML", section: "J", departments: ["Technical"] },
+            { name: "Garv Chawla", branch: "AIDS", section: "N", departments: ["Technical","Event","Creative"] },
+            { name: "Ginishka Arora", branch: "AIDS", section: "M", departments: ["Video Editing"] },
+            { name: "Gouri Saroch", branch: "CSE", section: "C", departments: ["Technical"] },
+            { name: "Gyan Prakash", branch: "CSE", section: "Q", departments: ["Technical","Event"] },
+            { name: "Hardik Raj", branch: "AIML", section: "T", departments: ["Creative"] },
+            { name: "Harsh Chaudhary", branch: "CS", section: "W", departments: ["Technical"] },
+            { name: "Harsh Mathpal", branch: "CSE", section: "Q", departments: ["Event"] },
+            { name: "Harsh Pratap Singh", branch: "CS", section: "P", departments: ["Technical","PR & Sponsorship"] },
+            { name: "Harsh Raj", branch: "CSE", section: "A", departments: ["Event"] },
+            { name: "Harsh Sharma", branch: "CST", section: "O", departments: ["Technical","Event"] },
+            { name: "Harshit Jaiswal", branch: "IT", section: "E", departments: ["Social Media"] },
+            { name: "Hena Monga", branch: "AIML", section: "J", departments: ["Technical"] },
+            { name: "Iqra Khan", branch: "CSE", section: "B", departments: ["Technical","Anchoring"] },
+            { name: "Isha Chhikara", branch: "IT", section: "F", departments: ["Technical","Anchoring"] },
+            { name: "Janvi", branch: "AIML", section: "I", departments: ["Technical"] },
+            { name: "Jatin", branch: "AIDS", section: "L", departments: ["Event"] },
+            { name: "Jatin Jaiswal", branch: "IT", section: "E", departments: ["Content","Creative"] },
+            { name: "Jitika Bansal", branch: "AIDS", section: "N", departments: ["Event","Graphics","PR & Sponsorship"] },
+            { name: "Kajal Verma", branch: "AIML", section: "J", departments: ["Creative"] },
+            { name: "Kartikeya Sharma", branch: "CST", section: "V", departments: ["Event","Content","PR & Sponsorship"] },
+            { name: "Kashvi Sharma", branch: "IT", section: "E", departments: ["PR & Sponsorship","Content"] },
+            { name: "Kashvi Verma", branch: "ECE", section: "D", departments: ["Video Editing","Technical"] },
+            { name: "Kaveri", branch: "IT", section: "E", departments: ["Creative"] },
+            { name: "Kavya Gujral", branch: "AIDS", section: "M", departments: ["Technical","Event"] },
+            { name: "Ketki", branch: "CSE", section: "A", departments: ["Anchoring"] },
+            { name: "Khushal Jain", branch: "AIDS", section: "L", departments: ["Technical","Event"] },
+            { name: "Khushi Gupta", branch: "IT", section: "F", departments: ["Technical","Anchoring","Creative"] },
+            { name: "Khushi Kumari", branch: "AIML", section: "J", departments: ["Event"] },
+            { name: "Khushi Sharma", branch: "CSE", section: "C", departments: ["Technical"] },
+            { name: "Kinjal Gupta", branch: "AIDS", section: "L", departments: ["Technical","Creative"] },
+            { name: "Krishna Saxena", branch: "IT", section: "E", departments: ["PR & Sponsorship","Event"] },
+            { name: "Krishna Sinha", branch: "CST", section: "V", departments: ["Event","PR & Sponsorship"] },
+            { name: "Kritarth Shukla", branch: "AIML", section: "I", departments: ["Technical"] },
+            { name: "Kriti Jain", branch: "AIDS", section: "M", departments: ["Event"] },
+            { name: "Lakshay Murthy", branch: "IT", section: "S", departments: ["Technical","Event","PR & Sponsorship"] },
+            { name: "Lakshit", branch: "CS", section: "P", departments: ["Technical","PR & Sponsorship"] },
+            { name: "Lavanye Garg", branch: "AIML", section: "K", departments: ["Technical"] },
+            { name: "Madhav Gupta", branch: "IT", section: "E", departments: ["Social Media","Video Editing","Content"] },
+            { name: "Madhav Kabra", branch: "AIDS", section: "U", departments: ["Technical"] },
+            { name: "Manan Masiwal", branch: "AIML", section: "T", departments: ["Content"] },
+            { name: "Mansi Tiwari", branch: "CSE", section: "B", departments: ["Creative","Anchoring","PR & Sponsorship"] },
+            { name: "Mayank Sharma", branch: "AIML", section: "J", departments: ["Technical","Event"] },
+            { name: "Mayank Yadav", branch: "CS", section: "W", departments: ["Technical"] },
+            { name: "MD Anwar", branch: "CSE", section: "A", departments: ["Technical"] },
+            { name: "Meenakshi Saun", branch: "IT", section: "F", departments: ["Technical","Creative"] },
+            { name: "Mohd Asad Ahmad", branch: "AIML", section: "J", departments: ["Event"] },
+            { name: "Mohd. Kaif", branch: "AIML", section: "K", departments: ["Content"] },
+            { name: "Mohit Chhabra", branch: "AIML", section: "T", departments: ["Content"] },
+            { name: "Mourya Aditya", branch: "CSE", section: "A", departments: ["Technical","Creative"] },
+            { name: "Naitik Malhotra", branch: "CST", section: "V", departments: ["Technical","PR & Sponsorship"] },
+            { name: "Naman Agarwal", branch: "IT", section: "E", departments: ["Event"] },
+            { name: "Naman Jain", branch: "ECE", section: "R", departments: ["Technical"] },
+            { name: "Naman Kr. Singh", branch: "AIML", section: "T", departments: ["Creative","Content"] },
+            { name: "Namit Bisht", branch: "CSE", section: "A", departments: ["Technical"] },
+            { name: "Nikunj Malik", branch: "AIML", section: "I", departments: ["Technical","Event"] },
+            { name: "Nirbhay", branch: "CSE", section: "Q", departments: ["Technical","Social Media","Video Editing","Graphics"] },
+            { name: "Nisha Kumari", branch: "CSE", section: "A", departments: ["Technical","Anchoring","Creative"] },
+            { name: "Nitin Kumar", branch: "CSE", section: "B", departments: ["Technical"] },
+            { name: "Niya Sharma", branch: "CS", section: "P", departments: ["Graphics"] },
+            { name: "Niyati Rawat", branch: "IT", section: "E", departments: ["Graphics","Video Editing"] },
+            { name: "Ojassv Manchanda", branch: "AIDS", section: "M", departments: ["Graphics"] },
+            { name: "Palak Sharma", branch: "IT", section: "F", departments: ["Anchoring","Content"] },
+            { name: "Piyush", branch: "AIML", section: "J", departments: ["Technical"] },
+            { name: "Prachi", branch: "CST", section: "V", departments: ["Technical","PR & Sponsorship","Creative"] },
+            { name: "Prajna Sharma", branch: "AIDS", section: "M", departments: ["Creative","Graphics"] },
+            { name: "Pranav Aggarwal", branch: "AIML", section: "I", departments: ["Technical","Anchoring"] },
+            { name: "Prateek", branch: "CSE", section: "C", departments: ["Technical","PR & Sponsorship"] },
+            { name: "Pratyush Shandilya", branch: "IT", section: "S", departments: ["Technical","Event","PR & Sponsorship"] },
+            { name: "Prince Malay", branch: "CSE", section: "B", departments: ["Technical","PR & Sponsorship"] },
+            { name: "Prince Soni", branch: "AIDS", section: "U", departments: ["Creative","Graphics"] },
+            { name: "Priyanshi Khanna", branch: "IT", section: "E", departments: ["Social Media","Content"] },
+            { name: "Rabiya Parveen", branch: "CS", section: "P", departments: ["Technical","Event"] },
+            { name: "Rahul Sahani", branch: "CS", section: "W", departments: ["PR & Sponsorship","Event"] },
+            { name: "Rajat", branch: "CSE", section: "A", departments: ["Technical","Anchoring"] },
+            { name: "Raksha Anand", branch: "CSE", section: "C", departments: ["Technical","Content"] },
+            { name: "Rashi", branch: "CSE", section: "Q", departments: ["Technical"] },
+            { name: "Ravi Joshi", branch: "IT", section: "F", departments: ["Social Media"] },
+            { name: "Riddhi Arora", branch: "CS", section: "W", departments: ["Technical"] },
+            { name: "Ronit", branch: "CS", section: "W", departments: ["Technical","Event"] },
+            { name: "Rudraksh Gupta", branch: "CST", section: "O", departments: ["PR & Sponsorship","Event"] },
+            { name: "Rudrakshi", branch: "CSE", section: "C", departments: ["Technical","Creative"] },
+            { name: "Sachin Gupta", branch: "CST", section: "V", departments: ["Event"] },
+            { name: "Sakshi", branch: "CST", section: "V", departments: ["Technical"] },
+            { name: "Sanchit Binwal", branch: "CS", section: "W", departments: ["Graphics"] },
+            { name: "Sarthak Jain", branch: "CS", section: "W", departments: ["Event"] },
+            { name: "Saumay Dwivedi", branch: "CSE", section: "A", departments: ["Technical","Event"] },
+            { name: "Saurav Mishra", branch: "ECE", section: "D", departments: ["Anchoring"] },
+            { name: "Shaibal Chakraborty", branch: "CSE", section: "Q", departments: ["Technical","Graphics"] },
+            { name: "Shaz Ahmed", branch: "CSE", section: "B", departments: ["Technical"] },
+            { name: "Shiva Jaiswal", branch: "CSE", section: "A", departments: ["Technical","Anchoring"] },
+            { name: "Shivam", branch: "CSE", section: "C", departments: ["Event"] },
+            { name: "Shivam Pal", branch: "CST", section: "O", departments: ["Technical"] },
+            { name: "Shivam Panwar", branch: "CSE", section: "A", departments: ["Technical","Event"] },
+            { name: "Shlok", branch: "AIDS", section: "U", departments: ["Content"] },
+            { name: "Shreeyash Khandelwal", branch: "CS", section: "P", departments: ["Technical","Anchoring"] },
+            { name: "Shresth", branch: "IT", section: "E", departments: ["Content","Creative"] },
+            { name: "Shresth Malik", branch: "AIML", section: "T", departments: ["Content"] },
+            { name: "Shreya Aggarwal", branch: "AIML", section: "I", departments: ["Technical","Event"] },
+            { name: "Shreya Gupta", branch: "CSE", section: "A", departments: ["Technical","Anchoring"] },
+            { name: "Shreya Singh", branch: "AIML", section: "J", departments: ["Event"] },
+            { name: "Shruti Maharaj", branch: "AIML", section: "T", departments: ["Technical","Anchoring","Content"] },
+            { name: "Shubh Singhal", branch: "CS", section: "W", departments: ["Social Media","Video Editing","Graphics"] },
+            { name: "Shubhmay Pradhan", branch: "CSE", section: "C", departments: ["Technical"] },
+            { name: "Siddharth Singh", branch: "AIDS", section: "L", departments: ["Technical","Event"] },
+            { name: "Siddhi Dhawan", branch: "CSE", section: "A", departments: ["Technical","Content"] },
+            { name: "Snigdha Khanna", branch: "ECE", section: "D", departments: ["Technical"] },
+            { name: "Soumya Yadav", branch: "AIML", section: "T", departments: ["Content"] },
+            { name: "Subham Prakash Mishra", branch: "CST", section: "O", departments: ["Technical"] },
+            { name: "Suhani Chaudhary", branch: "ME", section: "G&H", departments: ["Social Media","Video Editing","Content"] },
+            { name: "Surya Chauhan", branch: "AIML", section: "I", departments: ["Technical"] },
+            { name: "Syed Altamash", branch: "AIML", section: "T", departments: ["Graphics"] },
+            { name: "Tanishqa Rani", branch: "CS", section: "P", departments: ["Technical","Event"] },
+            { name: "Taniya Garg", branch: "AIDS", section: "N", departments: ["Technical","Creative","Event"] },
+            { name: "Tanmay Parida", branch: "CS", section: "W", departments: ["PR & Sponsorship","Event"] },
+            { name: "Tripti Thakur", branch: "CS", section: "W", departments: ["Technical"] },
+            { name: "Udit bansal", branch: "CS", section: "W", departments: ["Graphics"] },
+            { name: "Ujjwal Sharma", branch: "AIDS", section: "U", departments: ["Technical"] },
+            { name: "Ujjwal Singh", branch: "AIML", section: "K", departments: ["Technical"] },
+            { name: "Vaman Jangra", branch: "AIDS", section: "L", departments: ["Event"] },
+            { name: "Vansh Gairola", branch: "CST", section: "V", departments: ["PR & Sponsorship"] },
+            { name: "Vansh Gupta", branch: "ECE", section: "R", departments: ["Technical","Anchoring"] },
+            { name: "Vansh Tyagi", branch: "AIML", section: "J", departments: ["Graphics"] },
+            { name: "Vanshika Gupta", branch: "AIDS", section: "M", departments: ["Technical","Creative","Content"] },
+            { name: "Veedushi Bhatt", branch: "AIML", section: "T", departments: ["Anchoring","Content"] },
+            { name: "Vinita Katara", branch: "CSE", section: "Q", departments: ["Technical"] },
+            { name: "Vyom Saxena", branch: "AIDS", section: "U", departments: ["Technical"] },
+            { name: "Yash", branch: "CST", section: "O", departments: ["Technical"] },
+            { name: "Yuvraj", branch: "CSE", section: "C", departments: ["Event"] },
+            { name: "Zainuddin", branch: "CSE", section: "B", departments: ["Technical","Anchoring","PR & Sponsorship"] }
         ];
 
         window.selectedStudentsList = selectedStudentsList; // Accessible globally for easy updates
@@ -566,6 +566,7 @@
         const selectedCountBadge = document.getElementById('selectedCountBadge');
         const branchFilterSelect = document.getElementById('branchFilterSelect');
         const sectionFilterSelect = document.getElementById('sectionFilterSelect');
+        const deptFilterSelect = document.getElementById('deptFilterSelect');
         const recruitSortSelect = document.getElementById('recruitSortSelect');
         const resetFiltersBtn = document.getElementById('resetFiltersBtn');
 
@@ -582,10 +583,11 @@
         function renderRecruits() {
             if (!recruitsGrid) return;
 
-            // Main search is strictly through name only
+            // Search by name or department keyword
             const nameQuery = (recruitSearchInput ? recruitSearchInput.value.trim().toLowerCase() : '');
             const selectedBranch = (branchFilterSelect ? branchFilterSelect.value : 'all');
             const selectedSection = (sectionFilterSelect ? sectionFilterSelect.value : 'all');
+            const selectedDept = (deptFilterSelect ? deptFilterSelect.value : 'all');
             const sortVal = (recruitSortSelect ? recruitSortSelect.value : 'branch-asc');
 
             if (clearSearchBtn) {
@@ -593,17 +595,22 @@
             }
 
             const filtered = selectedStudentsList.filter(student => {
-                // Strict name search for main search bar
-                const matchesName = (nameQuery === '' || (student.name && student.name.toLowerCase().includes(nameQuery)));
-                // Branch dropdown search/filter
+                // Search query matches student name or department name
+                const matchesSearch = (nameQuery === '' ||
+                    (student.name && student.name.toLowerCase().includes(nameQuery)) ||
+                    (student.departments && student.departments.some(d => d.toLowerCase().includes(nameQuery)))
+                );
+                // Branch dropdown filter
                 const matchesBranch = (selectedBranch === 'all' || (student.branch && student.branch.toUpperCase() === selectedBranch.toUpperCase()));
-                // Section dropdown search/filter
+                // Section dropdown filter
                 const matchesSection = (selectedSection === 'all' || (student.section && String(student.section).toUpperCase() === selectedSection.toUpperCase()));
+                // Department dropdown filter
+                const matchesDept = (selectedDept === 'all' || (student.departments && student.departments.some(d => d.toLowerCase() === selectedDept.toLowerCase())));
 
-                return matchesName && matchesBranch && matchesSection;
+                return matchesSearch && matchesBranch && matchesSection && matchesDept;
             });
 
-            // Sorting strictly on the basis of branch and section
+            // Sorting by Branch, Section, Department, or Name
             filtered.sort((a, b) => {
                 let primaryA = '';
                 let primaryB = '';
@@ -611,13 +618,22 @@
                 let secondaryB = '';
 
                 if (sortVal === 'section-asc' || sortVal === 'section-desc') {
-                    // Sort on the basis of section
                     primaryA = (a.section || '').toLowerCase();
                     primaryB = (b.section || '').toLowerCase();
                     secondaryA = (a.branch || '').toLowerCase() + ' ' + (a.name || '').toLowerCase();
                     secondaryB = (b.branch || '').toLowerCase() + ' ' + (b.name || '').toLowerCase();
+                } else if (sortVal === 'dept-asc' || sortVal === 'dept-desc') {
+                    primaryA = (a.departments && a.departments.length > 0 ? a.departments.join(', ') : 'zz').toLowerCase();
+                    primaryB = (b.departments && b.departments.length > 0 ? b.departments.join(', ') : 'zz').toLowerCase();
+                    secondaryA = (a.name || '').toLowerCase();
+                    secondaryB = (b.name || '').toLowerCase();
+                } else if (sortVal === 'name-asc' || sortVal === 'name-desc') {
+                    primaryA = (a.name || '').toLowerCase();
+                    primaryB = (b.name || '').toLowerCase();
+                    secondaryA = (a.branch || '').toLowerCase() + ' ' + (a.section || '').toLowerCase();
+                    secondaryB = (b.branch || '').toLowerCase() + ' ' + (b.section || '').toLowerCase();
                 } else {
-                    // Default: Sort on the basis of branch
+                    // Default: Sort by branch
                     primaryA = (a.branch || '').toLowerCase();
                     primaryB = (b.branch || '').toLowerCase();
                     secondaryA = (a.section || '').toLowerCase() + ' ' + (a.name || '').toLowerCase();
@@ -629,12 +645,12 @@
                     cmp = secondaryA.localeCompare(secondaryB, undefined, { numeric: true, sensitivity: 'base' });
                 }
 
-                const isDesc = (sortVal === 'branch-desc' || sortVal === 'section-desc');
+                const isDesc = (sortVal === 'branch-desc' || sortVal === 'section-desc' || sortVal === 'dept-desc' || sortVal === 'name-desc');
                 return isDesc ? -cmp : cmp;
             });
 
             if (selectedCountBadge) {
-                const isFiltered = (nameQuery !== '' || selectedBranch !== 'all' || selectedSection !== 'all');
+                const isFiltered = (nameQuery !== '' || selectedBranch !== 'all' || selectedSection !== 'all' || selectedDept !== 'all');
                 if (!isFiltered) {
                     selectedCountBadge.innerHTML = `Showing <strong>${filtered.length}</strong> Selected Members`;
                 } else {
@@ -648,33 +664,46 @@
                 if (noRecruitsFound) {
                     noRecruitsFound.style.display = 'block';
                     let filterInfo = [];
-                    if (nameQuery) filterInfo.push(`name "${escapeHtml(nameQuery)}"`);
+                    if (nameQuery) filterInfo.push(`query "${escapeHtml(nameQuery)}"`);
                     if (selectedBranch !== 'all') filterInfo.push(`branch "${escapeHtml(selectedBranch)}"`);
                     if (selectedSection !== 'all') filterInfo.push(`section "${escapeHtml(selectedSection)}"`);
+                    if (selectedDept !== 'all') filterInfo.push(`department "${escapeHtml(selectedDept)}"`);
                     const infoText = filterInfo.length > 0 ? filterInfo.join(', ') : 'selected criteria';
                     noRecruitsFound.innerHTML = `<p>No selected member found matching ${infoText}. Please check your spelling or reset filters.</p>`;
                 }
             } else {
                 if (noRecruitsFound) noRecruitsFound.style.display = 'none';
                 recruitsGrid.style.display = 'grid';
-                recruitsGrid.innerHTML = filtered.map(student => `
-                    <div class="recruit-card reveal active-reveal premium-hover">
-                        <h4 class="recruit-name">${escapeHtml(student.name)}</h4>
-                        <div class="recruit-meta-row">
-                            <span class="recruit-meta-pill">
-                                <span class="meta-label">Branch:</span>
-                                <span class="meta-value">${escapeHtml(student.branch)}</span>
-                            </span>
-                            <span class="recruit-meta-pill">
-                                <span class="meta-label">Section:</span>
-                                <span class="meta-value">${escapeHtml(String(student.section))}</span>
-                            </span>
+                recruitsGrid.innerHTML = filtered.map(student => {
+                    const deptsHtml = (student.departments && student.departments.length > 0)
+                        ? student.departments.map(d => `<span class="recruit-dept-tag"><span class="dept-bullet"></span>${escapeHtml(d)}</span>`).join('')
+                        : `<span class="recruit-dept-tag dept-general"><span class="dept-bullet"></span>Member</span>`;
+
+                    return `
+                        <div class="recruit-card reveal active-reveal premium-hover">
+                            <h4 class="recruit-name">${escapeHtml(student.name)}</h4>
+                            <div class="recruit-meta-row">
+                                <span class="recruit-meta-pill">
+                                    <span class="meta-label">Branch:</span>
+                                    <span class="meta-value">${escapeHtml(student.branch)}</span>
+                                </span>
+                                <span class="recruit-meta-pill">
+                                    <span class="meta-label">Section:</span>
+                                    <span class="meta-value">${escapeHtml(String(student.section))}</span>
+                                </span>
+                            </div>
+                            <div class="recruit-depts-row">
+                                <span class="depts-label">Department:</span>
+                                <div class="depts-tags-list">
+                                    ${deptsHtml}
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                `).join('');
+                    `;
+                }).join('');
 
                 // Custom cursor hover binding
-                recruitsGrid.querySelectorAll('.recruit-card').forEach(el => {
+                recruitsGrid.querySelectorAll('.recruit-card, .recruit-dept-tag').forEach(el => {
                     el.addEventListener('mouseenter', () => document.body.classList.add('hovering'));
                     el.addEventListener('mouseleave', () => document.body.classList.remove('hovering'));
                 });
@@ -705,6 +734,10 @@
                 sectionFilterSelect.addEventListener('change', renderRecruits);
             }
 
+            if (deptFilterSelect) {
+                deptFilterSelect.addEventListener('change', renderRecruits);
+            }
+
             if (recruitSortSelect) {
                 recruitSortSelect.addEventListener('change', renderRecruits);
             }
@@ -714,6 +747,7 @@
                     if (recruitSearchInput) recruitSearchInput.value = '';
                     if (branchFilterSelect) branchFilterSelect.value = 'all';
                     if (sectionFilterSelect) sectionFilterSelect.value = 'all';
+                    if (deptFilterSelect) deptFilterSelect.value = 'all';
                     if (recruitSortSelect) recruitSortSelect.value = 'branch-asc';
                     renderRecruits();
                 });

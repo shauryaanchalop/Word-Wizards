@@ -772,15 +772,15 @@
             gap: 12px;
             flex-wrap: wrap;
             width: 100%;
-            max-width: 780px;
+            max-width: 960px;
         }
 
         .dropdown-field {
             display: flex;
             flex-direction: column;
             gap: 5px;
-            flex: 1 1 180px;
-            min-width: 140px;
+            flex: 1 1 170px;
+            min-width: 135px;
         }
 
         .dropdown-field.reset-field {
@@ -978,6 +978,67 @@
         .recruit-meta-pill .meta-value {
             font-weight: 600;
             color: var(--primary-text);
+        }
+
+        /* Department Badges Row */
+        .recruit-depts-row {
+            display: flex;
+            flex-direction: column;
+            gap: 0.35rem;
+            margin-top: 0.15rem;
+            padding-top: 0.65rem;
+            border-top: 1px dashed rgba(225, 29, 72, 0.14);
+        }
+
+        .depts-label {
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+        }
+
+        .depts-tags-list {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            flex-wrap: wrap;
+        }
+
+        .recruit-dept-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background: rgba(112, 26, 59, 0.05);
+            border: 1px solid rgba(225, 29, 72, 0.18);
+            color: #701a3b;
+            padding: 0.22rem 0.65rem;
+            border-radius: 8px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            line-height: 1.25;
+            transition: all 0.25s ease;
+        }
+
+        .recruit-dept-tag.dept-general {
+            color: var(--text-muted);
+            border-style: dashed;
+        }
+
+        .recruit-dept-tag .dept-bullet {
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: var(--accent-color);
+            flex-shrink: 0;
+        }
+
+        @media (hover: hover) and (pointer: fine) {
+            .recruit-dept-tag:hover {
+                background: rgba(225, 29, 72, 0.12);
+                border-color: rgba(225, 29, 72, 0.35);
+                transform: translateY(-1px);
+            }
         }
 
         @media (hover: hover) and (pointer: fine) {
