@@ -509,7 +509,7 @@
             { name: "Rudrakshi", branch: "CSE", section: "C", departments: ["Technical","Creative"] },
             { name: "Sachin Gupta", branch: "CST", section: "V", departments: ["Event"] },
             { name: "Sakshi", branch: "CST", section: "V", departments: ["Technical"] },
-            { name: "Sanchit Binwal", branch: "CS", section: "W", departments: ["Graphics"] },
+            { name: "Sanchit Binwal", branch: "CS", section: "W", departments: ["Graphics", "Event"] },
             { name: "Sarthak Jain", branch: "CS", section: "W", departments: ["Event"] },
             { name: "Saumay Dwivedi", branch: "CSE", section: "A", departments: ["Technical","Event"] },
             { name: "Saurav Mishra", branch: "ECE", section: "D", departments: ["Anchoring"] },
