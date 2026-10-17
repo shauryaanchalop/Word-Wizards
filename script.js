@@ -543,7 +543,7 @@
             { name: "Tripti Thakur", branch: "CS", section: "W", departments: ["Technical"] },
             { name: "Udit bansal", branch: "CS", section: "W", departments: ["Graphics"] },
             { name: "Ujjwal Sharma", branch: "AIDS", section: "U", departments: ["Technical"] },
-            { name: "Ujjwal Singh", branch: "AIML", section: "K", departments: ["Technical"] },
+            { name: "Ujjwal Singh", branch: "AIML", section: "K", departments: ["Technical", "Event"] },
             { name: "Vaman Jangra", branch: "AIDS", section: "L", departments: ["Event"] },
             { name: "Vansh Gairola", branch: "CST", section: "V", departments: ["PR & Sponsorship"] },
             { name: "Vansh Gupta", branch: "ECE", section: "R", departments: ["Technical","Anchoring"] },
