@@ -536,7 +536,7 @@
             { name: "Subham Prakash Mishra", branch: "CST", section: "O", departments: ["Technical"] },
             { name: "Suhani Chaudhary", branch: "ME", section: "G&H", departments: ["Social Media","Video Editing","Content"] },
             { name: "Surya Chauhan", branch: "AIML", section: "I", departments: ["Technical"] },
-            { name: "Syed Altamash", branch: "AIML", section: "T", departments: ["Graphics"] },
+            { name: "Syed Altamash", branch: "AIML", section: "T", departments: ["Technical", "Graphics"] },
             { name: "Tanishqa Rani", branch: "CS", section: "P", departments: ["Technical","Event"] },
             { name: "Taniya Garg", branch: "AIDS", section: "N", departments: ["Technical","Creative","Event"] },
             { name: "Tanmay Parida", branch: "CS", section: "W", departments: ["PR & Sponsorship","Event"] },
